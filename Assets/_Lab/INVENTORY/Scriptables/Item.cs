@@ -4,7 +4,11 @@ using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Item", menuName = "TEMPItem")]
 
-public class TEMPItem : ScriptableObject
+public class Item : ScriptableObject
 {
     public string ItemName;
+
+    public string Description;
+
+    public Sprite Sprite;
 }
