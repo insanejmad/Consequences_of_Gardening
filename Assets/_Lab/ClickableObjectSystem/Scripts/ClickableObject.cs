@@ -27,7 +27,7 @@ public class ClickableObject : MonoBehaviour
 	    Debug.LogError(name + " need an item \\o/");
 	    return;
 	}
-	HoveredOff();
+	HoverOff();
     }
 
     private void Start()
@@ -35,11 +35,26 @@ public class ClickableObject : MonoBehaviour
 	SetupItem();
     }
 
+    private void SetupItem()
+    {
+	if (item == null)
+	    return;
+	if (item.Sprite != null)
+	    spriteRenderer.sprite = item.Sprite;
+	//Wait PlayerInventoryInstantiationInAwaik
+	//if (PlayerInventory.instance.ItemList.Contains(Item))
+	//    gameObject.SetActive(false);
+	
+    }
+
     private void Update()
     {
-	if (_isHovered && Input.GetMouseButtonDown(0))
+	if (_isHovered)
 	{
-	    ClickableObjectManager.instance.OpenPanel(this);
+	    if (ClickableObjectManager.instance.CursorOnChoicePanel)
+		HoverOff();
+	    if (Input.GetMouseButtonDown(0))
+		ClickableObjectManager.instance.OpenChoicePanel(this);
 	}
     }
 
@@ -51,14 +66,6 @@ public class ClickableObject : MonoBehaviour
     public bool IsInteractable
     {
 	get => (isInspectable || isTakeble);
-    }
-
-    private void SetupItem()
-    {
-	if (item == null)
-	    return;
-	if (item.Sprite != null)
-	    spriteRenderer.sprite = item.Sprite;
     }
 
     #region INTERACTIONS
@@ -97,28 +104,28 @@ public class ClickableObject : MonoBehaviour
 
     private void OnMouseOver()
     {
-	if (!IsInteractable)
+	if (!IsInteractable || ClickableObjectManager.instance.CursorOnChoicePanel)
 	    return;
-	_isHovered = true;
-	HoveredOn();
+	HoverOn();
     }
 
     private void OnMouseExit()
     {
 	if (!IsInteractable)
 	    return;
-	_isHovered = false;
-	HoveredOff();
+	HoverOff();
     }
 
-    private void HoveredOff()
+    private void HoverOff()
     {
+	_isHovered = false;
 	if (highlightObject)
 	    highlightObject.SetActive(false);
     }
 
-    private void HoveredOn()
+    private void HoverOn()
     {
+	_isHovered = true;
 	if (highlightObject)
 	    highlightObject.SetActive(true);
     }
