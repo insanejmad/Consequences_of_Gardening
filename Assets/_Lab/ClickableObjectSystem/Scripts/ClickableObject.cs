@@ -19,80 +19,80 @@ public class ClickableObject : MonoBehaviour
 
     private void Awake()
     {
-        if (!GetComponent<Collider2D>()) {
+        if (!GetComponent<Collider2D>())
+        {
             Debug.LogWarning(name + " need a 2D collider :c", this);
             gameObject.AddComponent<Collider2D>();
         }
-	if (item == null) {
-	    Debug.LogError(name + " need an item \\o/");
-	    return;
-	}
-	HoverOff();
+        if (item == null)
+        {
+            Debug.LogError(name + " need an item \\o/");
+            return;
+        }
+        HoverOff();
     }
 
     private void Start()
     {
-	SetupItem();
+        SetupItem();
     }
 
     private void SetupItem()
     {
-	if (item == null)
-	    return;
-	if (item.Sprite != null)
-	    spriteRenderer.sprite = item.Sprite;
-	//Wait PlayerInventoryInstantiationInAwaik
-	//if (PlayerInventory.instance.ItemList.Contains(Item))
-	//    gameObject.SetActive(false);
-	
+        if (item == null)
+            return;
+        if (item.Sprite != null)
+            spriteRenderer.sprite = item.Sprite;
+        //Wait PlayerInventoryInstantiationInAwaik
+        //if (PlayerInventory.instance.ItemList.Contains(Item))
+        //    gameObject.SetActive(false);
     }
 
     private void Update()
     {
-	if (_isHovered)
-	{
-	    if (ClickableObjectManager.instance.CursorOnChoicePanel)
-		HoverOff();
-	    if (Input.GetMouseButtonDown(0))
-		ClickableObjectManager.instance.OpenChoicePanel(this);
-	}
+        if (_isHovered)
+        {
+            if (ClickableObjectManager.instance.CursorOnChoicePanel)
+                HoverOff();
+            if (Input.GetMouseButtonDown(0))
+                ClickableObjectManager.instance.OpenChoicePanel(this);
+        }
     }
 
     public Item Item
     {
-	get => item;
+        get => item;
     }
 
     public bool IsInteractable
     {
-	get => (isInspectable || isTakeble);
+        get => (isInspectable || isTakeble);
     }
 
     #region INTERACTIONS
     public void Take()
     {
-	isTakeble = false;
-	StartCoroutine(TakeAnimation());
+        isTakeble = false;
+        StartCoroutine(TakeAnimation());
     }
 
     public IEnumerator TakeAnimation()
     {
-	Vector2 startPosition = transform.position;
-	Vector2 endPosition = ClickableObjectManager.instance.GetItemTargetPos;
+        Vector2 startPosition = transform.position;
+        Vector2 endPosition = ClickableObjectManager.instance.GetItemTargetPos;
 
-	for (float t = 0; t < _takeAnimationTime; t += Time.deltaTime)
-	{
-	    transform.position = Vector2.Lerp(startPosition, endPosition, t / _takeAnimationTime);
-	    yield return null;
-	}
-	gameObject.SetActive(false);
-	if (item)
-	    PlayerInventory.instance.AddItem(item);
+        for (float t = 0; t < _takeAnimationTime; t += Time.deltaTime) {
+            transform.position = Vector2.Lerp(startPosition, endPosition, t / _takeAnimationTime);
+            yield return null;
+        }
+        gameObject.SetActive(false);
+        if (item)
+            PlayerInventory.instance.AddItem(item);
     }
 
     public void Inspect()
     {
-	Debug.Log(name + " Inspected");
+        Debug.Log(name + " Inspected");
     }
     #endregion
 
@@ -104,30 +104,30 @@ public class ClickableObject : MonoBehaviour
 
     private void OnMouseOver()
     {
-	if (!IsInteractable || ClickableObjectManager.instance.CursorOnChoicePanel)
-	    return;
-	HoverOn();
+        if (!IsInteractable || ClickableObjectManager.instance.CursorOnChoicePanel)
+            return;
+        HoverOn();
     }
 
     private void OnMouseExit()
     {
-	if (!IsInteractable)
-	    return;
-	HoverOff();
+        if (!IsInteractable)
+            return;
+        HoverOff();
     }
 
     private void HoverOff()
     {
-	_isHovered = false;
-	if (highlightObject)
-	    highlightObject.SetActive(false);
+        _isHovered = false;
+        if (highlightObject)
+            highlightObject.SetActive(false);
     }
 
     private void HoverOn()
     {
-	_isHovered = true;
-	if (highlightObject)
-	    highlightObject.SetActive(true);
+        _isHovered = true;
+        if (highlightObject)
+            highlightObject.SetActive(true);
     }
     #endregion
 }

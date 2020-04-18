@@ -6,7 +6,8 @@ public class ClickableObjectManager : MonoBehaviour
 {
     public static ClickableObjectManager instance = null;
     [SerializeField] ChoicePanel choicePanel = null;
-    [Tooltip("End point for take animation")] [SerializeField]
+    [Tooltip("End point for take animation")]
+    [SerializeField]
     private Transform itemTarget = null;
     private bool _isTargetOnUI = false;
 
@@ -14,49 +15,49 @@ public class ClickableObjectManager : MonoBehaviour
 
     private void Awake()
     {
-	instance = this;
-	if (itemTarget == null)
-	    Debug.LogWarning(name + " need an itemTarget =^=", this);
-	else
-	    _isTargetOnUI = itemTarget.GetComponent<RectTransform>() != null;
-	if (choicePanel == null)
-	    choicePanel = GameObject.FindObjectOfType<ChoicePanel>();
-	if (choicePanel == null)
-	    Debug.LogError(name + " need a ChoicePanel instance ;-;", this);
-	_clickableObjectsList = GameObject.FindObjectsOfType<ClickableObject>();
+        instance = this;
+        if (itemTarget == null)
+            Debug.LogWarning(name + " need an itemTarget =^=", this);
+        else
+            _isTargetOnUI = itemTarget.GetComponent<RectTransform>() != null;
+        if (choicePanel == null)
+            choicePanel = GameObject.FindObjectOfType<ChoicePanel>();
+        if (choicePanel == null)
+            Debug.LogError(name + " need a ChoicePanel instance ;-;", this);
+        _clickableObjectsList = GameObject.FindObjectsOfType<ClickableObject>();
     }
 
     public Vector2 GetItemTargetPos
     {
-	get
-	{
-	    if (itemTarget == null)
-		return Vector2.zero;
-	    if (_isTargetOnUI)
-		return Camera.main.ScreenToWorldPoint(itemTarget.position);
-	    return itemTarget.position;
-	}
+        get
+        {
+            if (itemTarget == null)
+                return Vector2.zero;
+            if (_isTargetOnUI)
+                return Camera.main.ScreenToWorldPoint(itemTarget.position);
+            return itemTarget.position;
+        }
     }
 
     #region CHOICE_PANEL
     public void OpenChoicePanel(ClickableObject target)
     {
-	choicePanel.Setup(target);
+        choicePanel.Setup(target);
     }
 
     public bool IsChoicePanelOpen
     {
-	get => choicePanel.gameObject.activeSelf;
+        get => choicePanel.gameObject.activeSelf;
     }
 
     public bool CursorOnChoicePanel
     {
-	get => choicePanel.HaveCursorOn;
+        get => choicePanel.HaveCursorOn;
     }
     #endregion
 
     private void OnDestroy()
     {
-	instance = null;
+        instance = null;
     }
 }
