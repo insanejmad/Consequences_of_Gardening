@@ -6,8 +6,12 @@ using UnityEngine.Events;
 
 public class ClickableObject : MonoBehaviour
 {
-    [SerializeField] private bool isTakeble = true;
+    [SerializeField] private SpriteRenderer spriteRenderer = null;
+    [Header("Options")]
+    public bool isTakeble = true;
+    public bool isInspectable = true;
     [SerializeField] private GameObject highlightObject = null;
+    [SerializeField] private Item item = null;
 
     private bool _isHovered = false;
 
@@ -16,20 +20,48 @@ public class ClickableObject : MonoBehaviour
     private void Awake()
     {
         if (!GetComponent<Collider2D>()) {
-            Debug.LogWarning(name + " need a 2D collider");
+            Debug.LogWarning(name + " need a 2D collider :c", this);
             gameObject.AddComponent<Collider2D>();
         }
+	if (item == null) {
+	    Debug.LogError(name + " need an item \\o/");
+	    return;
+	}
 	HoveredOff();
+    }
+
+    private void Start()
+    {
+	SetupItem();
     }
 
     private void Update()
     {
-	if (_isHovered && isTakeble && Input.GetMouseButtonDown(0))
+	if (_isHovered && Input.GetMouseButtonDown(0))
 	{
 	    ClickableObjectManager.instance.OpenPanel(this);
 	}
     }
 
+    public Item Item
+    {
+	get => item;
+    }
+
+    public bool IsInteractable
+    {
+	get => (isInspectable || isTakeble);
+    }
+
+    private void SetupItem()
+    {
+	if (item == null)
+	    return;
+	if (item.Sprite != null)
+	    spriteRenderer.sprite = item.Sprite;
+    }
+
+    #region INTERACTIONS
     public void Take()
     {
 	isTakeble = false;
@@ -47,13 +79,17 @@ public class ClickableObject : MonoBehaviour
 	    yield return null;
 	}
 	gameObject.SetActive(false);
+	if (item)
+	    PlayerInventory.instance.AddItem(item);
     }
 
     public void Inspect()
     {
 	Debug.Log(name + " Inspected");
     }
+    #endregion
 
+    #region HOVER_SYSTEM
     public bool IsHovered
     {
         get => _isHovered;
@@ -61,7 +97,7 @@ public class ClickableObject : MonoBehaviour
 
     private void OnMouseOver()
     {
-	if (!isTakeble)
+	if (!IsInteractable)
 	    return;
 	_isHovered = true;
 	HoveredOn();
@@ -69,7 +105,7 @@ public class ClickableObject : MonoBehaviour
 
     private void OnMouseExit()
     {
-	if (!isTakeble)
+	if (!IsInteractable)
 	    return;
 	_isHovered = false;
 	HoveredOff();
@@ -86,4 +122,5 @@ public class ClickableObject : MonoBehaviour
 	if (highlightObject)
 	    highlightObject.SetActive(true);
     }
+    #endregion
 }

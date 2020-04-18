@@ -5,28 +5,23 @@ using UnityEngine;
 public class ClickableObjectManager : MonoBehaviour
 {
     public static ClickableObjectManager instance = null;
-    [SerializeField] RectTransform ChoicePanel = null;
-
+    [SerializeField] ChoicePanel choicePanel = null;
     [Tooltip("End point for take animation")] [SerializeField]
     private Transform itemTarget = null;
-
     private bool _isTargetOnUI = false;
-    private ClickableObject _target;
 
     private void Awake()
     {
 	instance = this;
 	if (itemTarget == null)
-	    Debug.LogWarning(name + " need an itemTarget");
+	    Debug.LogWarning(name + " need an itemTarget", this);
 	else
 	    _isTargetOnUI = itemTarget.GetComponent<RectTransform>() != null;
+	if (choicePanel == null)
+	    choicePanel = GameObject.FindObjectOfType<ChoicePanel>();
+	if (choicePanel == null)
+	    Debug.LogError(name + " need a ChoicePanel instance", this);
     }
-
-    private void Start()
-    {
-	ChoicePanel.gameObject.SetActive(false);
-    }
-
 
     public Vector2 GetItemTargetPos
     {
@@ -42,22 +37,6 @@ public class ClickableObjectManager : MonoBehaviour
 
     public void OpenPanel(ClickableObject target)
     {
-	ChoicePanel.position = Input.mousePosition;
-	ChoicePanel.gameObject.SetActive(true);
-	_target = target;
-    }
-
-    public void Take()
-    {
-	ChoicePanel.gameObject.SetActive(false);
-	_target.Take();
-	_target = null;
-    }
-
-    public void Inspect()
-    {
-	ChoicePanel.gameObject.SetActive(false);
-	_target.Inspect();
-	_target = null;
+	choicePanel.Setup(target);
     }
 }
