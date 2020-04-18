@@ -10,7 +10,7 @@ public class PlayerInventory : MonoBehaviour
 {
     public static PlayerInventory instance = null;
 
-    public List<TEMPItem> ItemList;
+    public List<Item> ItemList;
 
     public int maxItems = 2;
 
@@ -25,7 +25,7 @@ public class PlayerInventory : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        ItemList = new List<TEMPItem>(maxItems);
+        ItemList = new List<Item>(maxItems);
 
     }
 
@@ -41,7 +41,7 @@ public class PlayerInventory : MonoBehaviour
         return false;
     }
 
-    public TEMPItem GetItem(string name)
+    public Item GetItem(string name)
     {
 
         foreach (var item in ItemList)
@@ -56,7 +56,7 @@ public class PlayerInventory : MonoBehaviour
         return null;
     }
 
-    public void AddItem(TEMPItem it)
+    public void AddItem(Item it)
     {
         if(ItemList.Count < maxItems)
         {
@@ -70,7 +70,7 @@ public class PlayerInventory : MonoBehaviour
 
     public void RemoveItem(string name)
     {
-        TEMPItem item = GetItem(name);
+        Item item = GetItem(name);
         ItemList.Remove(item);
     }
 }

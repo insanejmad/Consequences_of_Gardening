@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class TEMPItemButton : MonoBehaviour
 {
     public Button button;
-    public TEMPItem item;
+    public Item item;
     // Start is called before the first frame update
     void Start()
     {
