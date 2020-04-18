@@ -8,10 +8,13 @@ namespace TMPro.EditorUtilities
     public class TMP_AnimatedEditor : TMP_BaseEditorPanel
     {
         SerializedProperty speedProp;
+        SerializedProperty pauseProp;
+
         protected override void OnEnable()
         {
             base.OnEnable();
             speedProp = serializedObject.FindProperty("speed");
+            pauseProp = serializedObject.FindProperty("pauseTime");
 
         }
         protected override void OnUndoRedo()
@@ -21,12 +24,12 @@ namespace TMPro.EditorUtilities
         {
             EditorGUILayout.LabelField("Animation Settings", EditorStyles.boldLabel);
             EditorGUILayout.PropertyField(speedProp, new GUIContent("     Default Speed"));
-
+            EditorGUILayout.PropertyField(pauseProp, new GUIContent("     Pause time before animation continue"));
         }
+
         protected override bool IsMixSelectionTypes()
         {
             return false;
         }
-
     }
 }

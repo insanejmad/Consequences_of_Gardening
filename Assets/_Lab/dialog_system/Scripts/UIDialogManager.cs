@@ -34,7 +34,7 @@ namespace DialogSystem
             {
                 text.Clear();
                 s.Join(canvasGroup.transform.DOScale(0, time * 2).From().SetEase(Ease.OutBack));
-                s.AppendCallback(() => text.Read("Ceci est un text à lire, avec de la ponctuation. C'est un peu compliqué..."));
+                s.AppendCallback(() => text.Read("Ceci est un text à lire, avec des pauses... C'est un peu compliqué !"));
             }
         }
 
