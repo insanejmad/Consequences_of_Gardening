@@ -26,7 +26,7 @@ namespace GameObjectBehavior
 
         void Update()
         {
-            if (Input.GetMouseButtonDown(0))
+            if (IsHovered && Input.GetMouseButtonDown(0))
                 OnInteracted.Invoke();
 
             if (IsHovered && null == OriginalMaterial)
