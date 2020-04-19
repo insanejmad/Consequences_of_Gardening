@@ -6,6 +6,8 @@ using Lib.Struct;
 
 namespace DialogSystem
 {
+    public enum PositionType { LEFT, RIGHT };
+
     [RequireComponent(typeof(CanvasGroup))]
     public class UIDialogManager : MonoBehaviour
     {
@@ -14,6 +16,9 @@ namespace DialogSystem
         public float DialogOpenDelay = .65f;
         public float DialogOpenSpeed = .3f;
         public TMP_Animated Text;
+        public Image LeftAvatar;
+        public Image RightAvatar;
+        public Image Cursor;
         public Dialog Dialog;
         public bool InDialog { get; private set; } = false;
         public bool HasNextDialog { get; private set; } = false;
@@ -23,10 +28,12 @@ namespace DialogSystem
 
         int DialogIndex = 0;
         int SentenceIndex = 0;
-        CharacterDialog CurrentDialog { get => Dialog.List[DialogIndex]; }
         string CurrentSentence { get => CurrentDialog.Sentences[SentenceIndex]; }
+        Image CurrentAvatar { get => PositionToDisplay == PositionType.LEFT ? LeftAvatar : RightAvatar; }
+        CharacterDialog CurrentDialog { get => Dialog.List[DialogIndex]; }
         CanvasGroup CanvasGroup;
         Character Character;
+        PositionType PositionToDisplay = PositionType.LEFT;
 
         void OnEnable()
         {
@@ -49,11 +56,18 @@ namespace DialogSystem
 
             if (!InDialog && null != Dialog)
                 StartDialog();
+
+            Cursor.gameObject.SetActive(TextWasRead);
         }
 
         void UpdateUI() {
             // TODO Implement
             Text.Clear();
+            LeftAvatar.gameObject.SetActive(PositionToDisplay == PositionType.LEFT);
+            RightAvatar.gameObject.SetActive(PositionToDisplay == PositionType.RIGHT);
+
+            if (null != Character.Avatar)
+                CurrentAvatar.sprite = Character.Avatar;
         }
 
         void HandlePlayerAction() {
@@ -89,18 +103,20 @@ namespace DialogSystem
             HasNextDialog = false;
             HasNextSentence = false;
             CanStop = false;
+            PositionToDisplay = PositionType.LEFT;
             DisplayDialogUI(false, DialogOpenSpeed, 0);
         }
 
         void SwitchCharacter() {
             Character NextCharacter = CurrentDialog.Character;
 
-            if (NextCharacter.Name == Character.Name) { // If it's the same character, just continue reading as usual
+            if (null == NextCharacter || NextCharacter.Name == Character.Name) { // If it's the same character, just continue reading as usual
                 Text.Read(CurrentSentence);
                 return;
             }
 
             Character = NextCharacter;
+            PositionToDisplay = PositionToDisplay == PositionType.LEFT ? PositionType.RIGHT : PositionType.LEFT;
 
             DisplayDialogUI(false, DialogOpenSpeed, 0).AppendCallback(() => {
                 UpdateUI();
