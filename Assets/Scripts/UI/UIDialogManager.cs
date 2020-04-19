@@ -11,6 +11,7 @@ namespace DialogSystem
     public enum PositionType { LEFT, RIGHT };
 
     [RequireComponent(typeof(CanvasGroup))]
+    [RequireComponent(typeof(Image))]
     public class UIDialogManager : MonoBehaviour
     {
         public static UIDialogManager Instance;
@@ -66,7 +67,8 @@ namespace DialogSystem
             Cursor.gameObject.SetActive(TextWasRead);
         }
 
-        void UpdateUI() {
+        void UpdateUI()
+        {
             Text.Clear();
 
             LeftAvatar.gameObject.SetActive(PositionToDisplay == PositionType.LEFT);
@@ -85,7 +87,8 @@ namespace DialogSystem
             }
         }
 
-        void HandlePlayerAction() {
+        void HandlePlayerAction()
+        {
             if (!TextWasRead) {
                 Text.AvoidAnimation();
                 return;
@@ -102,14 +105,16 @@ namespace DialogSystem
 
         }
 
-        void StartDialog() {
+        void StartDialog()
+        {
             InDialog = true;
             Character = CurrentDialog.Character;
             UpdateUI();
             DisplayDialogUI(true, DialogOpenSpeed, DialogOpenDelay);
         }
 
-        void StopDialog() {
+        void StopDialog()
+        {
             Dialog = null;
             Character = null;
             DialogIndex = 0;
@@ -125,7 +130,8 @@ namespace DialogSystem
             });
         }
 
-        void SwitchCharacter() {
+        void SwitchCharacter()
+        {
             Character NextCharacter = CurrentDialog.Character;
 
             if (null == NextCharacter || NextCharacter.Name == Character.Name) { // If it's the same character, just continue reading as usual
