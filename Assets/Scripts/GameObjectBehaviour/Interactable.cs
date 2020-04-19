@@ -8,7 +8,6 @@ namespace GameObjectBehavior
     [System.Serializable] public class InteractableEvent : UnityEvent {}
 
     [RequireComponent(typeof(SpriteRenderer))]
-    [RequireComponent(typeof(Rigidbody2D))]
     [RequireComponent(typeof(BoxCollider2D))]
     public class Interactable : MonoBehaviour
     {
