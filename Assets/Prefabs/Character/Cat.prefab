@@ -168,6 +168,7 @@ MonoBehaviour:
   OnInteracted:
     m_PersistentCalls:
       m_Calls: []
+  HoverMaterial: {fileID: 2100000, guid: de962ec79443360409afbbf23e26dc44, type: 2}
 --- !u!114 &1942525792832156847
 MonoBehaviour:
   m_ObjectHideFlags: 0
