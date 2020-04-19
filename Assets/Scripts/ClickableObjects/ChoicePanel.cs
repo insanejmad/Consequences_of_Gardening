@@ -36,7 +36,7 @@ public class ChoicePanel : MonoBehaviour
             return;
         _target = target;
         PlacePanelOnScreen();
-        takeButton.gameObject.SetActive(target.isTakeble);
+        takeButton.gameObject.SetActive(target.isTakeble && target.TakeConditions);
         UpdateTakeButton();
         inspectButton.gameObject.SetActive(target.IsInspectable);
         itemNameLabel.text = target.Item.ItemName;

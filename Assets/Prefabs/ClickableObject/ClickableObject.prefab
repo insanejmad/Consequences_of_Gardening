@@ -72,8 +72,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: f250c3ca60fe9bb48a67d4cab08c286a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -101,7 +101,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.2, y: 0.2}
+    oldSize: {x: 0.14, y: 0.09}
     newSize: {x: 0.2, y: 0.2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -141,6 +141,8 @@ MonoBehaviour:
   isTakeble: 1
   spriteRenderer: {fileID: 2494382315352935474}
   item: {fileID: 11400000, guid: dc74a78d3dd3e7a41a135cc78f1f9e73, type: 2}
+  itemNeeded: 
+  characterToBeDead: 
   onTake:
     m_PersistentCalls:
       m_Calls: []

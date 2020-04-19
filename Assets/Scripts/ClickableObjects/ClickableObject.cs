@@ -13,6 +13,8 @@ public class ClickableObject : MonoBehaviour
     public bool isTakeble = true;
     [SerializeField] private SpriteRenderer spriteRenderer = null;
     [SerializeField] private Item item = null;
+    [SerializeField] private string itemNeeded = null;
+    [SerializeField] private string characterToBeDead = null;
     [Header("CustomEvents")]
     [SerializeField] private UnityEvent onTake = null;
     [SerializeField] private UnityEvent onInspect = null;
@@ -28,7 +30,24 @@ public class ClickableObject : MonoBehaviour
 
     public bool IsInteractable
     {
-        get => (IsInspectable || isTakeble);
+        get => (IsInspectable || (isTakeble && TakeConditions));
+    }
+
+    public bool TakeConditions
+    {
+        get
+        {
+            bool itemCondition = true;
+            bool characterCondition = true;
+
+            if (itemNeeded != null && itemNeeded != "")
+                itemCondition = PlayerInventory.instance.ContainsItem(itemNeeded);
+            if (characterToBeDead != null && characterToBeDead != "") {
+                //    characterToBeDead = WIP;
+            }
+
+            return (itemCondition && characterCondition);
+        }
     }
 
     public Item Item
@@ -64,12 +83,14 @@ public class ClickableObject : MonoBehaviour
     private void Update()
     {
         if (PlayerInventory.instance && item)
-            gameObject.SetActive(!PlayerInventory.instance.ItemList.ContainsValue(item));
+            gameObject.SetActive(!PlayerInventory.instance.ContainsItem(item.name));
     }
 
     #region INTERACTIONS
     public void Take()
     {
+        if (!isTakeble || !TakeConditions)
+            return;
         if (onTake != null)
             onTake.Invoke();
         if (!_takeAnimationLocker)
