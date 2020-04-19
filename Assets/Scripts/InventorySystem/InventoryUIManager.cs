@@ -21,9 +21,6 @@ public class InventoryUIManager : MonoBehaviour
     {
         PlayerInventory.instance.OnItemAdded += CreateInventoryItem;
         PlayerInventory.instance.OnItemRemoved += DeleteInventoryItem;
-
-        Debug.Log("check");
-
     }
 
     public void CreateInventoryItem(Item item)
