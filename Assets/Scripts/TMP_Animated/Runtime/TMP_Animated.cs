@@ -7,11 +7,11 @@ using UnityEngine.Events;
 
 namespace TMPro {
 
-    [System.Serializable] public class DialogEvent : UnityEvent {}
+    [System.Serializable] public class SentenceEvent : UnityEvent {}
 
     public class TMP_Animated : TextMeshProUGUI
     {
-        public DialogEvent OnDialogFinish;
+        public SentenceEvent OnSentenceFinished;
 
         [SerializeField] float Speed = 20;
         [SerializeField] float PauseTime = .5f;
@@ -62,7 +62,7 @@ namespace TMPro {
                 yield return null;
 
                 Animated = true;
-                OnDialogFinish.Invoke();
+                OnSentenceFinished.Invoke();
             }
         }
     }
