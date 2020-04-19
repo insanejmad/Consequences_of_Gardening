@@ -16,3 +16,4 @@ MonoBehaviour:
   Description: A wallet
   InventoryDescription: My wallet... It's empty currently... I need to get a job
   Sprite: {fileID: 21300000, guid: 58b4c3b0d9d03614f9c82908183d638c, type: 3}
+  InspectDialog: {fileID: 0}

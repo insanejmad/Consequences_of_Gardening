@@ -16,3 +16,4 @@ MonoBehaviour:
   Description: A tarot Deck
   InventoryDescription: My old trusty tarot deck
   Sprite: {fileID: 21300000, guid: f250c3ca60fe9bb48a67d4cab08c286a, type: 3}
+  InspectDialog: {fileID: 0}

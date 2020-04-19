@@ -8,11 +8,12 @@ using Lib.Struct;
 
 public class ClickableObject : AClickableObject
 {
-    [SerializeField] private SpriteRenderer spriteRenderer = null;
     public bool isTakeble = true;
-    [SerializeField] private GameObject highlightObject = null;
+    [SerializeField] private SpriteRenderer spriteRenderer = null;
     [SerializeField] private Item item = null;
-    [Header("Events")]
+    [Header("Optional")]
+    [SerializeField] private GameObject highlightObject = null;
+    [Header("CustomEvents")]
     [SerializeField] private UnityEvent onTake = null;
     [SerializeField] private UnityEvent onInspect = null;
 
@@ -65,7 +66,7 @@ public class ClickableObject : AClickableObject
                 HoverOff();
         }
         if (PlayerInventory.instance && item)
-            gameObject.SetActive(PlayerInventory.instance.ItemList.ContainsValue(item));
+            gameObject.SetActive(!PlayerInventory.instance.ItemList.ContainsValue(item));
     }
 
     #region INTERACTIONS
@@ -82,13 +83,14 @@ public class ClickableObject : AClickableObject
     {
         Vector2 startPosition = transform.position;
         Vector2 endPosition = ClickableObjectManager.instance.GetItemTargetPos;
+
         _takeAnimationLocker = true;
         for (float t = 0; t < _takeAnimationTime; t += Time.deltaTime) {
             transform.position = Vector2.Lerp(startPosition, endPosition, t / _takeAnimationTime);
             yield return null;
         }
         if (item && PlayerInventory.instance) {
-            if (PlayerInventory.instance.ItemList.ContainsValue(item))
+            if (!PlayerInventory.instance.ItemList.ContainsValue(item))
                 PlayerInventory.instance.AddItem(item);
         }
         gameObject.SetActive(false);
@@ -99,6 +101,10 @@ public class ClickableObject : AClickableObject
     {
         if (onInspect != null)
             onInspect.Invoke();
+        if (!IsInspectable) {
+            Debug.LogError("item dialog not found");
+            return;
+        }
         if (UIDialogManager.Instance)
             UIDialogManager.Instance.Dialog = item.InspectDialog;
         else

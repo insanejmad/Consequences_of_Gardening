@@ -16,3 +16,4 @@ MonoBehaviour:
   Description: a watering can
   InventoryDescription: my watering can
   Sprite: {fileID: 21300000, guid: 1a8691fa7f3f9ee44b2907425999f049, type: 3}
+  InspectDialog: {fileID: 0}
