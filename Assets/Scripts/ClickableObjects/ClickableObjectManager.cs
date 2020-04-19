@@ -65,8 +65,8 @@ public class ClickableObjectManager : MonoBehaviour
     public bool CursorOnChoicePanel
     {
         get {
-            //if (!choicePanel)
-            //    return false;
+            if (!choicePanel)
+                return false;
             return choicePanel.HaveCursorOn;
         }
     }

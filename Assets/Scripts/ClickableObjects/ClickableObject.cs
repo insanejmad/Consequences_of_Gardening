@@ -4,15 +4,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class ClickableObject : MonoBehaviour
+public class ClickableObject : AClickableObject
 {
     [SerializeField] private SpriteRenderer spriteRenderer = null;
     public bool isTakeble = true;
     public bool isInspectable = true;
     [SerializeField] private GameObject highlightObject = null;
     [SerializeField] private Item item = null;
-
-    private bool _isHovered = false;
+    [Header("Events")]
+    [SerializeField] private UnityEvent onTake = null;
+    [SerializeField] private UnityEvent onInspect = null;
 
     private const float _takeAnimationTime = 0.2f;
 
@@ -26,12 +27,9 @@ public class ClickableObject : MonoBehaviour
         get => item;
     }
 
-    private void Awake()
+    protected override void Awake()
     {
-        if (!GetComponent<Collider2D>()) {
-            Debug.LogWarning(name + " need a 2D collider :c", this);
-            gameObject.AddComponent<Collider2D>();
-        }
+        base.Awake();
         if (!spriteRenderer)
             spriteRenderer = GetComponent<SpriteRenderer>();
         if (item == null) {
@@ -52,9 +50,6 @@ public class ClickableObject : MonoBehaviour
             return;
         if (item.Sprite != null)
             spriteRenderer.sprite = item.Sprite;
-        //Wait PlayerInventoryInstantiationInAwaik
-        //if (PlayerInventory.instance.ItemList.Contains(Item))
-        //    gameObject.SetActive(false);
     }
 
     private void Update()
@@ -62,8 +57,6 @@ public class ClickableObject : MonoBehaviour
         if (_isHovered && ClickableObjectManager.HaveInstance) {
             if (ClickableObjectManager.instance.CursorOnChoicePanel)
                 HoverOff();
-            if (Input.GetMouseButtonDown(0))
-                ClickableObjectManager.instance.OpenChoicePanel(this);
         }
     }
 
@@ -71,6 +64,8 @@ public class ClickableObject : MonoBehaviour
     public void Take()
     {
         isTakeble = false;
+        if (onTake != null)
+            onTake.Invoke();
         StartCoroutine(TakeAnimation());
     }
 
@@ -90,42 +85,33 @@ public class ClickableObject : MonoBehaviour
 
     public void Inspect()
     {
+        if (onInspect != null)
+            onInspect.Invoke();
         Debug.Log(name + " Inspected");
     }
     #endregion
 
     #region HOVER_SYSTEM
-    public bool IsHovered
+    protected override void HoverOff()
     {
-        get => _isHovered;
-    }
-
-    private void OnMouseOver()
-    {
-        if (!IsInteractable || ClickableObjectManager.instance.CursorOnChoicePanel)
-            return;
-        HoverOn();
-    }
-
-    private void OnMouseExit()
-    {
-        if (!IsInteractable)
-            return;
-        HoverOff();
-    }
-
-    private void HoverOff()
-    {
-        _isHovered = false;
         if (highlightObject)
             highlightObject.SetActive(false);
     }
 
-    private void HoverOn()
+    protected override void HoverOn()
     {
-        _isHovered = true;
+        if (!IsInteractable) {
+            _isHovered = false;
+            return;
+        }
         if (highlightObject)
             highlightObject.SetActive(true);
+    }
+
+    protected override void ClickOn()
+    {
+        if (ClickableObjectManager.HaveInstance)
+            ClickableObjectManager.instance.OpenChoicePanel(this);
     }
     #endregion
 }
