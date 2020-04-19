@@ -22,8 +22,11 @@ public abstract class AClickableObject : MonoBehaviour
         if ((UIDialogManager.Instance && UIDialogManager.Instance.InDialog) ||
         (ClickableObjectManager.instance.CursorOnChoicePanel)) {
             _isHovered = false;
+            HoverOff();
             return;
         }
+        if (_isHovered)
+            return;
         _isHovered = true;
         HoverOn();
     }
