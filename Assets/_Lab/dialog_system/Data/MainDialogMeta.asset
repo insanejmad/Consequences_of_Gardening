@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b67a5de6496465a49b2e6cd6dfc4bbb3, type: 3}
   m_Name: MainDialogMeta
   m_EditorClassIdentifier: 
-  Background: {fileID: 0}
+  Background: {fileID: 21300000, guid: f29eaa377f8e38b438b4eee08a4f0fbd, type: 3}
+  FontColor: {r: 1, g: 1, b: 1, a: 0}
   SpeakSoundList: []

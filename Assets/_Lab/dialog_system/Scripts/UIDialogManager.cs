@@ -29,6 +29,7 @@ namespace DialogSystem
         int DialogIndex = 0;
         int SentenceIndex = 0;
         string CurrentSentence { get => CurrentDialog.Sentences[SentenceIndex]; }
+        Image Background;
         Image CurrentAvatar { get => PositionToDisplay == PositionType.LEFT ? LeftAvatar : RightAvatar; }
         CharacterDialog CurrentDialog { get => Dialog.List[DialogIndex]; }
         CanvasGroup CanvasGroup;
@@ -46,6 +47,7 @@ namespace DialogSystem
         }
 
         void Awake() {
+            Background = GetComponent<Image>();
             CanvasGroup = GetComponent<CanvasGroup>();
             DisplayDialogUI(false, 0, 0);
         }
@@ -61,13 +63,22 @@ namespace DialogSystem
         }
 
         void UpdateUI() {
-            // TODO Implement
             Text.Clear();
+
             LeftAvatar.gameObject.SetActive(PositionToDisplay == PositionType.LEFT);
             RightAvatar.gameObject.SetActive(PositionToDisplay == PositionType.RIGHT);
 
             if (null != Character.Avatar)
                 CurrentAvatar.sprite = Character.Avatar;
+
+            if (null != Character.DialogMeta.Background)
+                Background.sprite = Character.DialogMeta.Background;
+
+            if (null != Character.DialogMeta.FontColor)
+            {
+                Text.color = Character.DialogMeta.FontColor;
+                Cursor.color = Character.DialogMeta.FontColor;
+            }
         }
 
         void HandlePlayerAction() {
