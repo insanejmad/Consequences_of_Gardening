@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 using DG.Tweening;
 using TMPro;
 using Lib.Struct;
 
 namespace DialogSystem
 {
+    [System.Serializable] public class DialogEvent : UnityEvent {}
     public enum PositionType { LEFT, RIGHT };
 
     [RequireComponent(typeof(CanvasGroup))]
@@ -20,6 +22,7 @@ namespace DialogSystem
         public Image RightAvatar;
         public Image Cursor;
         public Dialog Dialog;
+        public DialogEvent OnDialogFinished;
         public bool InDialog { get; private set; } = false;
         public bool HasNextDialog { get; private set; } = false;
         public bool HasNextSentence { get; private set; } = false;
@@ -38,12 +41,12 @@ namespace DialogSystem
 
         void OnEnable()
         {
-            Text.OnDialogFinish.AddListener(OnFinishDialog);
+            Text.OnSentenceFinished.AddListener(OnFinishDialog);
         }
 
         void OnDisable()
         {
-            Text.OnDialogFinish.RemoveListener(OnFinishDialog);
+            Text.OnSentenceFinished.RemoveListener(OnFinishDialog);
         }
 
         void Awake() {
@@ -115,7 +118,10 @@ namespace DialogSystem
             HasNextSentence = false;
             CanStop = false;
             PositionToDisplay = PositionType.LEFT;
-            DisplayDialogUI(false, DialogOpenSpeed, 0);
+
+            DisplayDialogUI(false, DialogOpenSpeed, 0).AppendCallback(() => {
+                OnDialogFinished.Invoke();
+            });
         }
 
         void SwitchCharacter() {
