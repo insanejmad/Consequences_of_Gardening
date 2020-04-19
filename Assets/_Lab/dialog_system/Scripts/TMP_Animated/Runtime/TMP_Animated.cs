@@ -11,14 +11,19 @@ namespace TMPro {
 
     public class TMP_Animated : TextMeshProUGUI
     {
+        public DialogEvent OnDialogFinish;
+
         [SerializeField] float Speed = 20;
         [SerializeField] float PauseTime = .5f;
-
-        public DialogEvent OnDialogFinish;
+        bool Animated = true;
 
         public void Clear() {
             text = string.Empty;
             maxVisibleCharacters = 0;
+        }
+
+        public void AvoidAnimation() {
+            Animated = false;
         }
 
         public void Read(string textToRead) {
@@ -43,10 +48,12 @@ namespace TMPro {
                         visibleCounter++;
                         maxVisibleCharacters++;
                         total_counter++;
-                        yield return new WaitForSeconds(1f / Speed);
+
+                        if (Animated)
+                            yield return new WaitForSeconds(1f / Speed);
                     }
                 
-                    if (counter % 2 == 1)
+                    if (counter % 2 == 1 && Animated)
                         yield return new WaitForSeconds(PauseTime);
 
                     visibleCounter = 0;
@@ -54,6 +61,7 @@ namespace TMPro {
 
                 yield return null;
 
+                Animated = true;
                 OnDialogFinish.Invoke();
             }
         }

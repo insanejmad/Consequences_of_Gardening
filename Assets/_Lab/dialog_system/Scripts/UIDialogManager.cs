@@ -57,8 +57,10 @@ namespace DialogSystem
         }
 
         void HandlePlayerAction() {
-            if (!TextWasRead)
+            if (!TextWasRead) {
+                Text.AvoidAnimation();
                 return;
+            }
 
             TextWasRead = false;
 
