@@ -3,12 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using DialogSystem;
+using Lib.Struct;
 
 public class ClickableObject : AClickableObject
 {
     [SerializeField] private SpriteRenderer spriteRenderer = null;
     public bool isTakeble = true;
-    public bool isInspectable = true;
     [SerializeField] private GameObject highlightObject = null;
     [SerializeField] private Item item = null;
     [Header("Events")]
@@ -17,9 +18,14 @@ public class ClickableObject : AClickableObject
 
     private const float _takeAnimationTime = 0.2f;
 
+    public bool IsInspectable
+    {
+        get => (item && item.InspectDialog);
+    }
+
     public bool IsInteractable
     {
-        get => (isInspectable || isTakeble);
+        get => (IsInspectable || isTakeble);
     }
 
     public Item Item
@@ -58,37 +64,47 @@ public class ClickableObject : AClickableObject
             if (ClickableObjectManager.instance.CursorOnChoicePanel)
                 HoverOff();
         }
+        if (PlayerInventory.instance && item)
+            gameObject.SetActive(PlayerInventory.instance.ItemList.ContainsValue(item));
     }
 
     #region INTERACTIONS
     public void Take()
     {
-        isTakeble = false;
         if (onTake != null)
             onTake.Invoke();
-        StartCoroutine(TakeAnimation());
+        if (!_takeAnimationLocker)
+            StartCoroutine(TakeAnimation());
     }
 
+    private bool _takeAnimationLocker = false;
     public IEnumerator TakeAnimation()
     {
         Vector2 startPosition = transform.position;
         Vector2 endPosition = ClickableObjectManager.instance.GetItemTargetPos;
-
+        _takeAnimationLocker = true;
         for (float t = 0; t < _takeAnimationTime; t += Time.deltaTime) {
             transform.position = Vector2.Lerp(startPosition, endPosition, t / _takeAnimationTime);
             yield return null;
         }
+        if (item && PlayerInventory.instance) {
+            if (PlayerInventory.instance.ItemList.ContainsValue(item))
+                PlayerInventory.instance.AddItem(item);
+        }
         gameObject.SetActive(false);
-        if (item)
-            PlayerInventory.instance.AddItem(item);
+        _takeAnimationLocker = false;
     }
 
     public void Inspect()
     {
         if (onInspect != null)
             onInspect.Invoke();
-        Debug.Log(name + " Inspected");
+        if (UIDialogManager.Instance)
+            UIDialogManager.Instance.Dialog = item.InspectDialog;
+        else
+            Debug.LogError("No instance of UIDialogManager");
     }
+
     #endregion
 
     #region HOVER_SYSTEM

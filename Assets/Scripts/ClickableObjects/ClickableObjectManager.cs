@@ -7,8 +7,7 @@ public class ClickableObjectManager : MonoBehaviour
     public static ClickableObjectManager instance = null;
     [SerializeField] ChoicePanel choicePanel = null;
     [Tooltip("End point for take animation")]
-    [SerializeField]
-    private Transform itemTarget = null;
+    [SerializeField] private Transform itemTarget = null;
     private bool _isTargetOnUI = false;
 
     private ClickableObject[] _clickableObjectsList = null;
