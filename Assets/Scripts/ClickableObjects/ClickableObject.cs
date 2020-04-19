@@ -5,17 +5,19 @@ using UnityEngine;
 using UnityEngine.Events;
 using DialogSystem;
 using Lib.Struct;
+using GameObjectBehavior;
 
-public class ClickableObject : AClickableObject
+[RequireComponent(typeof(Interactable))]
+public class ClickableObject : MonoBehaviour
 {
     public bool isTakeble = true;
     [SerializeField] private SpriteRenderer spriteRenderer = null;
     [SerializeField] private Item item = null;
-    [Header("Optional")]
-    [SerializeField] private GameObject highlightObject = null;
     [Header("CustomEvents")]
     [SerializeField] private UnityEvent onTake = null;
     [SerializeField] private UnityEvent onInspect = null;
+
+    private Interactable _interactable = null;
 
     private const float _takeAnimationTime = 0.2f;
 
@@ -34,16 +36,16 @@ public class ClickableObject : AClickableObject
         get => item;
     }
 
-    protected override void Awake()
+    private void Awake()
     {
-        base.Awake();
+        _interactable = GetComponent<Interactable>();
+        _interactable.OnInteracted.AddListener(ClickOn);
         if (!spriteRenderer)
             spriteRenderer = GetComponent<SpriteRenderer>();
         if (item == null) {
             Debug.LogError(name + " need an item \\o/");
             return;
         }
-        HoverOff();
     }
 
     private void Start()
@@ -61,10 +63,6 @@ public class ClickableObject : AClickableObject
 
     private void Update()
     {
-        if (_isHovered && ClickableObjectManager.HaveInstance) {
-            if (ClickableObjectManager.instance.CursorOnChoicePanel)
-                HoverOff();
-        }
         if (PlayerInventory.instance && item)
             gameObject.SetActive(!PlayerInventory.instance.ItemList.ContainsValue(item));
     }
@@ -113,27 +111,9 @@ public class ClickableObject : AClickableObject
 
     #endregion
 
-    #region HOVER_SYSTEM
-    protected override void HoverOff()
-    {
-        if (highlightObject)
-            highlightObject.SetActive(false);
-    }
-
-    protected override void HoverOn()
-    {
-        if (!IsInteractable) {
-            _isHovered = false;
-            return;
-        }
-        if (highlightObject)
-            highlightObject.SetActive(true);
-    }
-
-    protected override void ClickOn()
+    private void ClickOn()
     {
         if (ClickableObjectManager.HaveInstance)
             ClickableObjectManager.instance.OpenChoicePanel(this);
     }
-    #endregion
 }
