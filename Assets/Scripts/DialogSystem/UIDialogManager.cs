@@ -94,8 +94,6 @@ namespace DialogSystem
                 return;
             }
 
-            TextWasRead = false;
-
             if (CanStop)
                 StopDialog();
             else if (HasNextSentence)
@@ -103,6 +101,7 @@ namespace DialogSystem
             else if (HasNextDialog)
                 SwitchCharacter();
 
+            TextWasRead = false;
         }
 
         void StartDialog()
@@ -111,23 +110,6 @@ namespace DialogSystem
             Character = CurrentDialog.Character;
             UpdateUI();
             DisplayDialogUI(true, DialogOpenSpeed, DialogOpenDelay);
-        }
-
-        void StopDialog()
-        {
-            Dialog = null;
-            Character = null;
-            DialogIndex = 0;
-            SentenceIndex = 0;
-            InDialog = false;
-            HasNextDialog = false;
-            HasNextSentence = false;
-            CanStop = false;
-            PositionToDisplay = PositionType.LEFT;
-
-            DisplayDialogUI(false, DialogOpenSpeed, 0).AppendCallback(() => {
-                OnDialogFinished.Invoke();
-            });
         }
 
         void SwitchCharacter()
@@ -158,6 +140,26 @@ namespace DialogSystem
                 s.AppendCallback(() => Text.Read(CurrentSentence));
 
             return s;
+        }
+
+        public void StopDialog()
+        {
+            if (!TextWasRead)
+                Text.AvoidAnimation();
+
+            Dialog = null;
+            Character = null;
+            DialogIndex = 0;
+            SentenceIndex = 0;
+            InDialog = false;
+            HasNextDialog = false;
+            HasNextSentence = false;
+            CanStop = false;
+            PositionToDisplay = PositionType.LEFT;
+
+            DisplayDialogUI(false, DialogOpenSpeed, 0).AppendCallback(() => {
+                OnDialogFinished.Invoke();
+            });
         }
 
         public void OnFinishDialog()
