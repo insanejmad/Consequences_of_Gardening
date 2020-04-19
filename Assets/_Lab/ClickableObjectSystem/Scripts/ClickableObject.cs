@@ -50,7 +50,7 @@ public class ClickableObject : MonoBehaviour
 
     private void Update()
     {
-        if (_isHovered)
+        if (_isHovered && ClickableObjectManager.HaveInstance)
         {
             if (ClickableObjectManager.instance.CursorOnChoicePanel)
                 HoverOff();

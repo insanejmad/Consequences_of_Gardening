@@ -13,13 +13,18 @@ public class ClickableObjectManager : MonoBehaviour
 
     private ClickableObject[] _clickableObjectsList = null;
 
+    public static bool HaveInstance
+    {
+        get => (instance != null);
+    }
+
     private void Awake()
     {
         instance = this;
         if (itemTarget == null)
             Debug.LogWarning(name + " need an itemTarget =^=", this);
         else
-            _isTargetOnUI = itemTarget.GetComponent<RectTransform>() != null;
+            _isTargetOnUI = itemTarget.GetComponentInParent<Canvas>() != null;
         if (choicePanel == null)
             choicePanel = GameObject.FindObjectOfType<ChoicePanel>();
         if (choicePanel == null)
@@ -42,17 +47,28 @@ public class ClickableObjectManager : MonoBehaviour
     #region CHOICE_PANEL
     public void OpenChoicePanel(ClickableObject target)
     {
-        choicePanel.Setup(target);
+        if (choicePanel != null)
+            choicePanel.Setup(target);
+        else
+            Debug.Log("Choice Panel not found :/", this);
     }
 
     public bool IsChoicePanelOpen
     {
-        get => choicePanel.gameObject.activeSelf;
+        get {
+            if (!choicePanel)
+                return false;
+            return (choicePanel.gameObject.activeSelf);
+        }
     }
 
     public bool CursorOnChoicePanel
     {
-        get => choicePanel.HaveCursorOn;
+        get {
+            if (!choicePanel)
+                return false;
+            return choicePanel.HaveCursorOn;
+        }
     }
     #endregion
 
