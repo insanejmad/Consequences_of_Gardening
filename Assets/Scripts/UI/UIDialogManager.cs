@@ -50,6 +50,7 @@ namespace DialogSystem
         }
 
         void Awake() {
+            Instance = this;
             Background = GetComponent<Image>();
             CanvasGroup = GetComponent<CanvasGroup>();
             DisplayDialogUI(false, 0, 0);
