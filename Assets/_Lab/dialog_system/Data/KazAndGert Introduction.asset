@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c2b114ad8beba441b71a2fe992af3ed, type: 3}
+  m_Name: KazAndGert Introduction
+  m_EditorClassIdentifier: 
+  List:
+  - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Sentences:
+    - Hello there !
+    - My name is <b><color=#BDB76B>Kaz</color></b>, and welcome to my room.
+    - And guess what ?
+    - ' I love... <b><color="green">plants</color></b>.'
+    - I present to you <b><color=#BDB76B>Gertrude</color></b>, say hello <b><color=#BDB76B>Gert'</color></b>.
+  - Character: {fileID: 11400000, guid: f5641c674727ef04ab5d1d08be299c91, type: 2}
+    Sentences:
+    - <b>Gmmmlmrmrgmg</b>
