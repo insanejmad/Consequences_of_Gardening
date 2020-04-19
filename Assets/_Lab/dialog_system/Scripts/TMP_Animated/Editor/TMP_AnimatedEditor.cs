@@ -7,14 +7,14 @@ namespace TMPro.EditorUtilities
     [CanEditMultipleObjects]
     public class TMP_AnimatedEditor : TMP_BaseEditorPanel
     {
-        SerializedProperty speedProp;
-        SerializedProperty pauseProp;
+        SerializedProperty SpeedProp;
+        SerializedProperty PauseProp;
 
         protected override void OnEnable()
         {
             base.OnEnable();
-            speedProp = serializedObject.FindProperty("speed");
-            pauseProp = serializedObject.FindProperty("pauseTime");
+            SpeedProp = serializedObject.FindProperty("Speed");
+            PauseProp = serializedObject.FindProperty("PauseTime");
 
         }
         protected override void OnUndoRedo()
@@ -23,8 +23,8 @@ namespace TMPro.EditorUtilities
         protected override void DrawExtraSettings()
         {
             EditorGUILayout.LabelField("Animation Settings", EditorStyles.boldLabel);
-            EditorGUILayout.PropertyField(speedProp, new GUIContent("     Default Speed"));
-            EditorGUILayout.PropertyField(pauseProp, new GUIContent("     Pause time before animation continue"));
+            EditorGUILayout.PropertyField(SpeedProp, new GUIContent("     Default Speed"));
+            EditorGUILayout.PropertyField(PauseProp, new GUIContent("     Pause time"));
         }
 
         protected override bool IsMixSelectionTypes()

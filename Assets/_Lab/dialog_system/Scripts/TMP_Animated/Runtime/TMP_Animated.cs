@@ -3,12 +3,18 @@ using System.Text.RegularExpressions;
 using System.Collections;
 using System.Globalization;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace TMPro {
+
+    [System.Serializable] public class DialogEvent : UnityEvent {}
+
     public class TMP_Animated : TextMeshProUGUI
     {
-        [SerializeField] float speed = 10;
-        [SerializeField] float pauseTime = .2f;
+        [SerializeField] float Speed = 20;
+        [SerializeField] float PauseTime = .5f;
+
+        public DialogEvent OnDialogFinish;
 
         public void Clear() {
             text = string.Empty;
@@ -18,31 +24,37 @@ namespace TMPro {
         public void Read(string textToRead) {
             Clear();
 
-            string[] subTexts = Regex.Split(textToRead, @"(,|\.{3})"); // Yes, guilty... o/
             text = textToRead;
+            ForceMeshUpdate();
+
+            // Remove TextMeshPro built-in tags and split with pause punctuation marks
+            string[] subTexts = Regex.Split(Regex.Replace(textToRead, "<[^>]*>", ""), @"(,|\.{3})"); // Yes, I'm guilty... o/
 
             StartCoroutine(DisplayText());
 
             IEnumerator DisplayText() {
-                int counter = 0;
+                int total_counter = 0;
                 int visibleCounter = 0;
 
-                while (counter < subTexts.Length) {
+                for (int counter = 0; counter < subTexts.Length; counter++) {
 
                     while (visibleCounter < subTexts[counter].Length)
                     {
                         visibleCounter++;
                         maxVisibleCharacters++;
-                        yield return new WaitForSeconds(1f / speed);
+                        total_counter++;
+                        yield return new WaitForSeconds(1f / Speed);
                     }
-
-                    if (counter % 2 == 1) // If pause punctuation
-                        yield return new WaitForSeconds(pauseTime);
+                
+                    if (counter % 2 == 1)
+                        yield return new WaitForSeconds(PauseTime);
 
                     visibleCounter = 0;
-                    counter++;
                 }
+
                 yield return null;
+
+                OnDialogFinish.Invoke();
             }
         }
     }
