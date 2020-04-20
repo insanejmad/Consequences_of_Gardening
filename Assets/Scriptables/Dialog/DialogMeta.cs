@@ -7,5 +7,4 @@ public class DialogMeta : ScriptableObject
 {
     public Sprite Background;
     public Color FontColor;
-    public AudioSource[] SpeakSoundList;
 }
