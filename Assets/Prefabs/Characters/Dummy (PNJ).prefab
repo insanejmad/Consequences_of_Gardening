@@ -127,6 +127,7 @@ MonoBehaviour:
   OnInteracted:
     m_PersistentCalls:
       m_Calls: []
+  ShowSpriteInsteadOfChangingMaterial: 0
   HoverMaterial: {fileID: 2100000, guid: de962ec79443360409afbbf23e26dc44, type: 2}
 --- !u!114 &8027623309440725292
 MonoBehaviour:
@@ -141,6 +142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Info: {fileID: 0}
+  DieClip: {fileID: 8300000, guid: 907fe7575b1d6f64aa42227355597d21, type: 3}
   PendingDialog: {fileID: 0}
   ValidDialog: {fileID: 0}
   ItemToObtainList: []
