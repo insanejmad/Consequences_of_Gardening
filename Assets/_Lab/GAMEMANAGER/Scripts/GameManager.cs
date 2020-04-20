@@ -80,7 +80,7 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(name);
         currentScene = name;
         //Find all the PNJ scripts with the npc tags, if any are dead, deactivate their gameobject
-        //ReloadCurrentCharacters();
+        ReloadCurrentCharacters();
     }
 
     private void ReloadCurrentCharacters()
@@ -96,6 +96,11 @@ public class GameManager : MonoBehaviour
                 component.gameObject.SetActive(false);
             }
         }
+    }
+
+    public CharacterStatus GetCharacterStatus(string name)
+    {
+        return CharacterStateDict[name].state;
     }
 
     public void CharacterToBeEaten(PNJ pnj)
