@@ -73,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: -7232521027535748977, guid: f5c4fc41526044a4daba3798eca401b8,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
+  m_MaskInteraction: 1
   m_SpriteSortPoint: 0
 --- !u!61 &8027623309440725281
 BoxCollider2D:
@@ -143,6 +143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TriggerOnQuestFinished: 1
   TriggerOnDie: 1
+  DisableOnAwake: 0
   Info: {fileID: 0}
   DieClip: {fileID: 8300000, guid: 907fe7575b1d6f64aa42227355597d21, type: 3}
   PendingDialog: {fileID: 0}
