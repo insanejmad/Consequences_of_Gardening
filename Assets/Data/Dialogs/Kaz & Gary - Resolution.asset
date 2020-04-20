@@ -15,6 +15,8 @@ MonoBehaviour:
   List:
   - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
     Sentences:
+    - (This guy looks depressed.)
+    - (Does he need help?)
     - Sir? Do you need any help?
   - Character: {fileID: 11400000, guid: ec607722bf19b524887f139ec403995d, type: 2}
     Sentences:

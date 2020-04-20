@@ -19,6 +19,8 @@ MonoBehaviour:
     - In need of some fixing?
   - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
     Sentences:
+    - (The store's clerk.)
+    - (He looks like a capable guy.)
     - 'Indeed... good sir. '
     - I have a problem with my computer.
   - Character: {fileID: 11400000, guid: 0c9901e5d3c38e14780a1e6a8b192546, type: 2}
