@@ -17,4 +17,5 @@ MonoBehaviour:
   InventoryDescription: A strong magnet, strong enough to destroy a hard drive form
     few centimeters away.
   Sprite: {fileID: 21300000, guid: 7f0eada5986838749a930b9d72283fcb, type: 3}
+  InventorySprite: {fileID: 21300000, guid: 7b873246c43497349a1db21cf3ff4c32, type: 3}
   InspectDialog: {fileID: 11400000, guid: f4b88b135be4f914a9623252d2097398, type: 2}

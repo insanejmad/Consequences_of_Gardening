@@ -15,5 +15,6 @@ MonoBehaviour:
   ItemName: Lamp
   Description: 
   InventoryDescription: A lamp that looks like a crystal ball.
-  Sprite: {fileID: 21300000, guid: d413fbf570353ab409a5315e00478b01, type: 3}
+  Sprite: {fileID: 21300000, guid: c3da2dcd558ded944b11f737574cf62f, type: 3}
+  InventorySprite: {fileID: 0}
   InspectDialog: {fileID: 11400000, guid: 70d844cc903994445874bab04db18adb, type: 2}
