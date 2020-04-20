@@ -72,14 +72,13 @@ public class GameManager : MonoBehaviour
         //Subscribe to the static events from the character classes.
         PNJ.OnQuestFinished += CharacterToBeEaten;
         PNJ.OnDied  += KillCharacter;
-        //SceneChangeButton.OnSceneChange += ChangeScene;
+        SceneChangeButton.OnSceneChange += ChangeScene;
     }
 
     public void ChangeScene(string name)
     {
         SceneManager.LoadScene(name);
         currentScene = name;
-
         //Find all the PNJ scripts with the npc tags, if any are dead, deactivate their gameobject
         //ReloadCurrentCharacters();
     }

@@ -346,6 +346,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4805309262600119502, guid: fb72b15e7803c6c45ab7de1e9a3cb07e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4805309262735352130, guid: fb72b15e7803c6c45ab7de1e9a3cb07e,
         type: 3}
       propertyPath: m_Name
@@ -354,7 +359,7 @@ PrefabInstance:
     - target: {fileID: 4805309262735352131, guid: fb72b15e7803c6c45ab7de1e9a3cb07e,
         type: 3}
       propertyPath: ScenesList.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4805309262735352131, guid: fb72b15e7803c6c45ab7de1e9a3cb07e,
         type: 3}
@@ -370,6 +375,11 @@ PrefabInstance:
         type: 3}
       propertyPath: ScenesList.Array.data[2]
       value: TestScene2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4805309262735352131, guid: fb72b15e7803c6c45ab7de1e9a3cb07e,
+        type: 3}
+      propertyPath: ScenesList.Array.data[0]
+      value: TestScene3
       objectReference: {fileID: 0}
     - target: {fileID: 4805309262735352132, guid: fb72b15e7803c6c45ab7de1e9a3cb07e,
         type: 3}
@@ -425,6 +435,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4805309263656272835, guid: fb72b15e7803c6c45ab7de1e9a3cb07e,
+        type: 3}
+      propertyPath: m_Spacing
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb72b15e7803c6c45ab7de1e9a3cb07e, type: 3}

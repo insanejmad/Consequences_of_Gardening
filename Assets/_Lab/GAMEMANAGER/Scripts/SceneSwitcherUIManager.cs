@@ -39,7 +39,7 @@ public class SceneSwitcherUIManager : MonoBehaviour
             obj.transform.SetParent(container.transform, false);
             obj.transform.GetChild(0).gameObject.GetComponent<Text>().text = name;
             }
-        container.SetActive(false);
+        //container.SetActive(false);
     }
 
 }
