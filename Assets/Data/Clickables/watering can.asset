@@ -16,4 +16,5 @@ MonoBehaviour:
   Description: a watering can
   InventoryDescription: A watercan. It won't help me outside of the flat.
   Sprite: {fileID: 21300000, guid: 1a8691fa7f3f9ee44b2907425999f049, type: 3}
+  InventorySprite: {fileID: 21300000, guid: 0b873c932d2bd3f4bacb3ca37d312d4b, type: 3}
   InspectDialog: {fileID: 11400000, guid: 0a145531ba43c0246952496ebe209bf5, type: 2}

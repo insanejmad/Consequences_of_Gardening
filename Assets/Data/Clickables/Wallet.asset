@@ -17,4 +17,5 @@ MonoBehaviour:
   InventoryDescription: My wallet. It has money in it. And I can buy things with
     that money.
   Sprite: {fileID: 21300000, guid: 58b4c3b0d9d03614f9c82908183d638c, type: 3}
+  InventorySprite: {fileID: 21300000, guid: e97a8691e3d77ff4a91de00cbae4965f, type: 3}
   InspectDialog: {fileID: 11400000, guid: b5969a6970110aa448aca3e20f48e079, type: 2}
