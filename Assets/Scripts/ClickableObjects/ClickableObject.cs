@@ -134,6 +134,8 @@ public class ClickableObject : MonoBehaviour
 
     private void ClickOn()
     {
+        if (UIDialogManager.Instance.InDialog)
+            return;
         if (ClickableObjectManager.HaveInstance)
             ClickableObjectManager.instance.OpenChoicePanel(this);
     }
