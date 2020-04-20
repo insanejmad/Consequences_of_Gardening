@@ -133,6 +133,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000,
         type: 0}
+    - target: {fileID: 8027623309440725287, guid: c02716081c214884e85be5857881bcfe,
+        type: 3}
+      propertyPath: m_TagString
+      value: PNJ
+      objectReference: {fileID: 0}
     - target: {fileID: 8027623309440725292, guid: c02716081c214884e85be5857881bcfe,
         type: 3}
       propertyPath: ItemToObtainList.Array.size
