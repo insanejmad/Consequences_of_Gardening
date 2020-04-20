@@ -14,5 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Barman
   Avatar: {fileID: 21300000, guid: 998164ff5292057448df28e9e1dd92ce, type: 3}
-  SpeakSoundList: []
+  VoiceClipList:
+  - {fileID: 8300000, guid: 11c39945c70af2243b60c1982e9a9e43, type: 3}
+  - {fileID: 8300000, guid: 26a588ebe96db6640beba80b0bff9109, type: 3}
+  - {fileID: 8300000, guid: 021ba28558f2c304b948516a644590c2, type: 3}
+  - {fileID: 8300000, guid: 732b2c5fa728cd9438f137a0fafd3070, type: 3}
+  - {fileID: 8300000, guid: 01cbd7c193c542a4a8c63e606e74b5f2, type: 3}
   DialogMeta: {fileID: 11400000, guid: 562548fd6d90b6f42b9476c59ae395fe, type: 2}

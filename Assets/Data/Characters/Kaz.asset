@@ -14,5 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Kaz
   Avatar: {fileID: 21300000, guid: 2c3a8490a738a63489a10448cf2547d1, type: 3}
-  SpeakSoundList: []
+  VoiceClipList:
+  - {fileID: 8300000, guid: 9bfcd632d2eb95c46bdf01ae6142f82e, type: 3}
+  - {fileID: 8300000, guid: e22d8dfe4f3fb8741b64585ef72d90aa, type: 3}
+  - {fileID: 8300000, guid: 26e3664d02cbc994d91b51da869f567c, type: 3}
+  - {fileID: 8300000, guid: 6ba8cbff79ba2ba4886f3e7bb4975fac, type: 3}
   DialogMeta: {fileID: 11400000, guid: 562548fd6d90b6f42b9476c59ae395fe, type: 2}
