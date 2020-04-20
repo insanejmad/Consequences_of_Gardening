@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ItemName: Controller
   Description: 
-  InventoryDescription: 
+  InventoryDescription: A Pro Controller, maybe I can give it to someone.
   Sprite: {fileID: 21300000, guid: daebd4b8f9302204fa9f50f851d0bd63, type: 3}
   InspectDialog: {fileID: 11400000, guid: 55359222329135943b8ee7b9514346c8, type: 2}

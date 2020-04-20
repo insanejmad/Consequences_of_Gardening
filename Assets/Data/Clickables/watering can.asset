@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ItemName: Watering can
   Description: a watering can
-  InventoryDescription: my watering can
+  InventoryDescription: A watercan. It won't help me outside of the flat.
   Sprite: {fileID: 21300000, guid: 1a8691fa7f3f9ee44b2907425999f049, type: 3}
   InspectDialog: {fileID: 11400000, guid: 0a145531ba43c0246952496ebe209bf5, type: 2}
