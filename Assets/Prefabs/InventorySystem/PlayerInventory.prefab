@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58f8ca8b6df295d418cdbbcaa1957f42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxItems: 3
+  maxItems: 8
   UImanager: {fileID: 5842220237668717219}
 --- !u!114 &5842220237668717219
 MonoBehaviour:
