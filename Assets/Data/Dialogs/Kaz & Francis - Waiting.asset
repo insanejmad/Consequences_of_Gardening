@@ -12,4 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c2b114ad8beba441b71a2fe992af3ed, type: 3}
   m_Name: Kaz & Francis - Waiting
   m_EditorClassIdentifier: 
-  List: []
+  List:
+  - Character: {fileID: 11400000, guid: 0c9901e5d3c38e14780a1e6a8b192546, type: 2}
+    Sentences:
+    - 'Welcome to our store! '
+    - 'We can fix everything, we even do home fixing. '
+    - You need anything?
+  - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Sentences:
+    - Actually, no.
+  - Character: {fileID: 11400000, guid: 0c9901e5d3c38e14780a1e6a8b192546, type: 2}
+    Sentences:
+    - Good for you, kiddo! Come back if you ever need fixing.

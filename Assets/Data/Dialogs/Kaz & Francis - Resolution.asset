@@ -12,4 +12,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c2b114ad8beba441b71a2fe992af3ed, type: 3}
   m_Name: Kaz & Francis - Resolution
   m_EditorClassIdentifier: 
-  List: []
+  List:
+  - Character: {fileID: 11400000, guid: 0c9901e5d3c38e14780a1e6a8b192546, type: 2}
+    Sentences:
+    - 'Welcome, welcome! '
+    - In need of some fixing?
+  - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Sentences:
+    - 'Indeed... good sir. '
+    - I have a problem with my computer.
+  - Character: {fileID: 11400000, guid: 0c9901e5d3c38e14780a1e6a8b192546, type: 2}
+    Sentences:
+    - 'No worries! I can fix almost anything! '
+    - 'What seems to be a problem? '
+    - With a general idea, I could write you a quote.
+  - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Sentences:
+    - It's broken.
+  - Character: {fileID: 11400000, guid: 0c9901e5d3c38e14780a1e6a8b192546, type: 2}
+    Sentences:
+    - Notice anything in particular?
+  - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Sentences:
+    - It does not work when I push the button.
+  - Character: {fileID: 11400000, guid: 0c9901e5d3c38e14780a1e6a8b192546, type: 2}
+    Sentences:
+    - How about the power source?
+  - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Sentences:
+    - Power supply is brand new, plug and sockets seem fine.
+  - Character: {fileID: 11400000, guid: 0c9901e5d3c38e14780a1e6a8b192546, type: 2}
+    Sentences:
+    - 'Alright, my boy. '
+    - 'Let''s go see that nasty problem you got. '
+    - 'I can''t really help much if I don''t take a good look at the machine. '
+    - You got a car?
+  - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Sentences:
+    - I don't.
+  - Character: {fileID: 11400000, guid: 0c9901e5d3c38e14780a1e6a8b192546, type: 2}
+    Sentences:
+    - I'll give you a ride, then! You can be my co-pilot ahah.
+  - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Sentences:
+    - Cool. Thanks.
+  - Character: {fileID: 11400000, guid: 0c9901e5d3c38e14780a1e6a8b192546, type: 2}
+    Sentences:
+    - 'I''ll log your adress after the work is done. '
+    - Remind me, heh?
+  - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Sentences:
+    - Haha, sure... (what a relief)
