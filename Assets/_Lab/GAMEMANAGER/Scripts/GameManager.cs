@@ -31,8 +31,6 @@ public class GameManager : MonoBehaviour
 
 
     //SCENES
-    private Dictionary<string, Scene> SceneDict;
-    public List<Scene> SceneList;
     public string currentScene;
 
 
@@ -66,12 +64,7 @@ public class GameManager : MonoBehaviour
             CharacterStateDict.Add(chara.Name, state);
         }
 
-        SceneDict = new Dictionary<string, Scene>();
 
-        foreach (Scene scene in SceneList)
-        {
-            SceneDict.Add(scene.name, scene);
-        }
     }
 
     private void InitializeEvents()
@@ -79,7 +72,7 @@ public class GameManager : MonoBehaviour
         //Subscribe to the static events from the character classes.
         PNJ.OnQuestFinished += CharacterToBeEaten;
         PNJ.OnDied  += KillCharacter;
-
+        //SceneChangeButton.OnSceneChange += ChangeScene;
     }
 
     public void ChangeScene(string name)
@@ -87,12 +80,8 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(name);
         currentScene = name;
 
-
-        //If we're in bedroom and npcs need to be eaten, spawn them
-
-
         //Find all the PNJ scripts with the npc tags, if any are dead, deactivate their gameobject
-        ReloadCurrentCharacters();
+        //ReloadCurrentCharacters();
     }
 
     private void ReloadCurrentCharacters()
