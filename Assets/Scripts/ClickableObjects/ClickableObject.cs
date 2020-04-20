@@ -141,6 +141,10 @@ public class ClickableObject : MonoBehaviour
     {
         if (UIDialogManager.Instance.InDialog)
             return;
+	if (IsInspectable && !(isTakeble && TakeConditions)) {
+	    Inspect();
+	    return;
+	}
         if (ClickableObjectManager.HaveInstance)
             ClickableObjectManager.instance.OpenChoicePanel(this);
     }
