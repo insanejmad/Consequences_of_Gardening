@@ -17,6 +17,26 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 149
       objectReference: {fileID: 0}
+    - target: {fileID: 8027623309440725281, guid: c02716081c214884e85be5857881bcfe,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.18702698
+      objectReference: {fileID: 0}
+    - target: {fileID: 8027623309440725281, guid: c02716081c214884e85be5857881bcfe,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 136.51062
+      objectReference: {fileID: 0}
+    - target: {fileID: 8027623309440725281, guid: c02716081c214884e85be5857881bcfe,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -2.2422714
+      objectReference: {fileID: 0}
+    - target: {fileID: 8027623309440725281, guid: c02716081c214884e85be5857881bcfe,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 39.2834
+      objectReference: {fileID: 0}
     - target: {fileID: 8027623309440725282, guid: c02716081c214884e85be5857881bcfe,
         type: 3}
       propertyPath: m_Sprite
@@ -81,7 +101,7 @@ PrefabInstance:
     - target: {fileID: 8027623309440725287, guid: c02716081c214884e85be5857881bcfe,
         type: 3}
       propertyPath: m_Name
-      value: Garis (PNJ)
+      value: Gary (PNJ)
       objectReference: {fileID: 0}
     - target: {fileID: 8027623309440725287, guid: c02716081c214884e85be5857881bcfe,
         type: 3}
@@ -89,5 +109,23 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000,
         type: 0}
+    - target: {fileID: 8027623309440725292, guid: c02716081c214884e85be5857881bcfe,
+        type: 3}
+      propertyPath: Info
+      value: 
+      objectReference: {fileID: 11400000, guid: ec607722bf19b524887f139ec403995d,
+        type: 2}
+    - target: {fileID: 8027623309440725292, guid: c02716081c214884e85be5857881bcfe,
+        type: 3}
+      propertyPath: PendingDialog
+      value: 
+      objectReference: {fileID: 11400000, guid: 7bd79e3071bc29241a6ce31c1aca055f,
+        type: 2}
+    - target: {fileID: 8027623309440725292, guid: c02716081c214884e85be5857881bcfe,
+        type: 3}
+      propertyPath: ValidDialog
+      value: 
+      objectReference: {fileID: 11400000, guid: f259af0eee946174a85eab57362ab809,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c02716081c214884e85be5857881bcfe, type: 3}
