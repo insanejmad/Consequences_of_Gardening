@@ -34,7 +34,7 @@ namespace GameObjectBehavior
 
         void Update() {
 
-            if (PointList.Count == 0 || IsFinished)
+            if (PointList.Count == 0 || IsFinished || UIDialogManager.Instance.InDialog)
                 return;
 
             if (IsTargetReached) {

@@ -13,10 +13,14 @@ MonoBehaviour:
   m_Name: Kaz & Gary - Death Part2
   m_EditorClassIdentifier: 
   List:
-  - Character: {fileID: 0}
+  - Character: {fileID: 11400000, guid: f5641c674727ef04ab5d1d08be299c91, type: 2}
+    Clip: {fileID: 8300000, guid: 3bc0fdd7da2d77c458ab410a6a926398, type: 3}
+    ClipOverrideAmbiance: 0
     Sentences:
     - NMMRNHGLH BRWAAGMNNAAAH
-  - Character: {fileID: 0}
+  - Character: {fileID: 11400000, guid: ec607722bf19b524887f139ec403995d, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
     - I can even hear it talk to me. ...wait, I see it now.
     - The encounter.

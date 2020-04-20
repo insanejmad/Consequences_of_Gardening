@@ -1263,6 +1263,18 @@ PrefabInstance:
       propertyPath: PointList.Array.data[1].Point
       value: 
       objectReference: {fileID: 365210860}
+    - target: {fileID: 9152366352983263376, guid: 1eb841b6b298191408b0aaab8ec18074,
+        type: 3}
+      propertyPath: PointList.Array.data[0].Dialog
+      value: 
+      objectReference: {fileID: 11400000, guid: bcef6a78b5ffde2408a613e6a6549bd2,
+        type: 2}
+    - target: {fileID: 9152366352983263376, guid: 1eb841b6b298191408b0aaab8ec18074,
+        type: 3}
+      propertyPath: PointList.Array.data[1].Dialog
+      value: 
+      objectReference: {fileID: 11400000, guid: 1f83545e829970e488c2472d20bb747c,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1eb841b6b298191408b0aaab8ec18074, type: 3}
 --- !u!4 &535609346 stripped
@@ -2579,6 +2591,18 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 902852492139214215, guid: 09e27617f4700c245b2d8e990e39d96f,
+        type: 3}
+      propertyPath: PointList.Array.data[0].Dialog
+      value: 
+      objectReference: {fileID: 11400000, guid: 5d59547192f893b4fbf5f607f5c81736,
+        type: 2}
+    - target: {fileID: 902852492139214215, guid: 09e27617f4700c245b2d8e990e39d96f,
+        type: 3}
+      propertyPath: PointList.Array.data[1].Dialog
+      value: 
+      objectReference: {fileID: 11400000, guid: 9afd3ad48129adf49832c7803ad14a3f,
+        type: 2}
     - target: {fileID: 4516493072736100740, guid: 09e27617f4700c245b2d8e990e39d96f,
         type: 3}
       propertyPath: DisableOnAwake
@@ -3500,6 +3524,18 @@ PrefabInstance:
       propertyPath: PointList.Array.data[1].Point
       value: 
       objectReference: {fileID: 365210860}
+    - target: {fileID: 3533448300337805543, guid: 6e09c15f990683e41aa59544b664d2f0,
+        type: 3}
+      propertyPath: PointList.Array.data[0].Dialog
+      value: 
+      objectReference: {fileID: 11400000, guid: 1f685b680511c074d83094883ddbd738,
+        type: 2}
+    - target: {fileID: 3533448300337805543, guid: 6e09c15f990683e41aa59544b664d2f0,
+        type: 3}
+      propertyPath: PointList.Array.data[1].Dialog
+      value: 
+      objectReference: {fileID: 11400000, guid: 4ecdce832bddcab458f6fc0a3576790e,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e09c15f990683e41aa59544b664d2f0, type: 3}
 --- !u!1 &1803175336
