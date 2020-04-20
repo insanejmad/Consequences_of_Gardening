@@ -12,4 +12,83 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c2b114ad8beba441b71a2fe992af3ed, type: 3}
   m_Name: Kaz & Gary - Resolution
   m_EditorClassIdentifier: 
-  List: []
+  List:
+  - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Sentences:
+    - Sir? Do you need any help?
+  - Character: {fileID: 11400000, guid: ec607722bf19b524887f139ec403995d, type: 2}
+    Sentences:
+    - I want to know - NO - I need to know about my future.
+  - Character: {fileID: 11400000, guid: ec607722bf19b524887f139ec403995d, type: 2}
+    Sentences:
+    - 'But clairvoyant isn''t here. '
+  - Character: {fileID: 11400000, guid: ec607722bf19b524887f139ec403995d, type: 2}
+    Sentences:
+    - The stall has been closed for hours. Where is she?!
+  - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Sentences:
+    - 'Good. '
+    - I was testing your resolve.
+    - ' It is I, the clairvoyant. '
+  - Character: {fileID: 11400000, guid: ec607722bf19b524887f139ec403995d, type: 2}
+    Sentences:
+    - You are?!
+  - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Sentences:
+    - 'Yes, yes. Magical blood flows in my veins. '
+    - See? This is my very own window to your future.
+  - Character: {fileID: 11400000, guid: ec607722bf19b524887f139ec403995d, type: 2}
+    Sentences:
+    - Oh my, a true wizard!  Praise be you.
+    - Tell me all about it! I must know.
+    - ' I must know.'
+  - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Sentences:
+    - '*music on* I see it... yes. (it really is a lamp)'
+  - Character: {fileID: 11400000, guid: ec607722bf19b524887f139ec403995d, type: 2}
+    Sentences:
+    - 'What do you see?! '
+    - Don't spare any details.
+  - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Sentences:
+    - You will soon have a...
+    - ...fated encounter with your destiny.
+  - Character: {fileID: 11400000, guid: ec607722bf19b524887f139ec403995d, type: 2}
+    Sentences:
+    - An encounter ?
+  - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Sentences:
+    - An extraordinary one, I might even say.
+  - Character: {fileID: 11400000, guid: ec607722bf19b524887f139ec403995d, type: 2}
+    Sentences:
+    - 'Is it for a job?  '
+    - A wedding?
+    - Wealth, maybe?
+    - Anything good? At least I hope.
+  - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Sentences:
+    - 'Become one with mother Nature. '
+    - Feed your roots. (Well... maybe not exactly your roots.)
+  - Character: {fileID: 11400000, guid: ec607722bf19b524887f139ec403995d, type: 2}
+    Sentences:
+    - 'But how will I know? '
+    - 'Will there be a sign? '
+    - There must be a sign. What is my sign?
+  - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Sentences:
+    - 'This is all I can see from here, sadly. '
+    - I would need more advanced techniques for more precision.
+  - Character: {fileID: 11400000, guid: ec607722bf19b524887f139ec403995d, type: 2}
+    Sentences:
+    - 'It can''t be all for nothing... '
+    - There has to be something else you can do!
+  - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Sentences:
+    - 'Actually... there is. Tarot readings.   '
+    - Most powerful.
+    - Seance should be conducted in my flat, I can't feel my chakras here.
+    - Too many waves.
+  - Character: {fileID: 11400000, guid: ec607722bf19b524887f139ec403995d, type: 2}
+    Sentences:
+    - Why, yes! I would follow you anywhere to borrow your powers!
+    - ' I am but your humble client.'
