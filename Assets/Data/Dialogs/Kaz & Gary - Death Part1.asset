@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c2b114ad8beba441b71a2fe992af3ed, type: 3}
+  m_Name: Kaz & Gary - Death Part1
+  m_EditorClassIdentifier: 
+  List:
+  - Character: {fileID: 11400000, guid: ec607722bf19b524887f139ec403995d, type: 2}
+    Sentences:
+    - So this is where you perform your strongest magic?
+    - The place is a lot brighter than I imagined.
+    - I had it all wrong...
+    - Light must be an important element for your powers to thrive!
+  - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Sentences:
+    - I still have to prepare.
+    - Chakra matters.
+    - Would you go near that plant?
+    - Helps reduce the interferences.
+  - Character: {fileID: 11400000, guid: ec607722bf19b524887f139ec403995d, type: 2}
+    Sentences:
+    - Anything to have your readings be the best they can be.
+    - How close? Is this close enough?
+    - ' I can feel the cleansing already.'
+    - Such a <b>powerful</b> being...
