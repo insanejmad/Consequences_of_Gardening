@@ -15,8 +15,23 @@ MonoBehaviour:
   Name: Kaz
   Avatar: {fileID: 21300000, guid: 2c3a8490a738a63489a10448cf2547d1, type: 3}
   VoiceClipList:
-  - {fileID: 8300000, guid: 9bfcd632d2eb95c46bdf01ae6142f82e, type: 3}
-  - {fileID: 8300000, guid: e22d8dfe4f3fb8741b64585ef72d90aa, type: 3}
-  - {fileID: 8300000, guid: 26e3664d02cbc994d91b51da869f567c, type: 3}
-  - {fileID: 8300000, guid: 6ba8cbff79ba2ba4886f3e7bb4975fac, type: 3}
+  - {fileID: 8300000, guid: fbcaec139b0bd7f4d88c018934d1e08f, type: 3}
+  - {fileID: 8300000, guid: a2f454144c17bc6409720e8ca9520c93, type: 3}
+  - {fileID: 8300000, guid: cf4f24d40accedc45afd878245a81fdf, type: 3}
+  - {fileID: 8300000, guid: 4c0ee6e7b9eb6b34fb78c95fb680f1d7, type: 3}
+  - {fileID: 8300000, guid: 733bbf324c6a54244b161d4d1bae0abb, type: 3}
+  - {fileID: 8300000, guid: b4646c26e43c5b3448c642ff48402793, type: 3}
+  - {fileID: 8300000, guid: 8778af55a15574d4694f8728a3742845, type: 3}
+  - {fileID: 8300000, guid: 113b5c544df155f4cb49840d64618b2b, type: 3}
+  - {fileID: 8300000, guid: 15d76546b39be7045a185cf2a147475d, type: 3}
+  - {fileID: 8300000, guid: 25a4ea770eb567f43a259e73f5878116, type: 3}
+  - {fileID: 8300000, guid: a463c2f0dc0a6e848b4f8eb3c109daa2, type: 3}
+  - {fileID: 8300000, guid: ff20b0dadd41e874181deebc6668bb32, type: 3}
+  - {fileID: 8300000, guid: fdc4f1b06100d764cbb2a237ab050c0a, type: 3}
+  - {fileID: 8300000, guid: 3dbb542d484d04648be68844e2b5a1b6, type: 3}
+  - {fileID: 8300000, guid: e758a3d0deeb2b2439021d32857f5488, type: 3}
+  - {fileID: 8300000, guid: 98dd17ec9a94da746870b011bd8ab610, type: 3}
+  - {fileID: 8300000, guid: c98f550821063a645a514ff36aa01fad, type: 3}
+  - {fileID: 8300000, guid: c29bbde8a82bfc844ae08bbe9786cee3, type: 3}
+  - {fileID: 8300000, guid: 4631dd894ab69cc40a3711b14815dc55, type: 3}
   DialogMeta: {fileID: 11400000, guid: 562548fd6d90b6f42b9476c59ae395fe, type: 2}
