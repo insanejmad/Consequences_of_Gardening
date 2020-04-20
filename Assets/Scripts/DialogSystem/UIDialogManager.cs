@@ -118,7 +118,7 @@ namespace DialogSystem
 
         void ReproduceSound()
         {
-            if (null == VoiceAudio || VoiceAudio.isPlaying || Character.VoiceClipList.Length == 0)
+            if (null == VoiceAudio || VoiceAudio.isPlaying || null == Character.VoiceClipList || Character.VoiceClipList.Length == 0)
                 return;
 
             VoiceAudio.clip = Character.VoiceClipList[Random.Range(0, Character.VoiceClipList.Length)];

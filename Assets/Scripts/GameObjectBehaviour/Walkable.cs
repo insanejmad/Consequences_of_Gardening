@@ -75,7 +75,7 @@ namespace GameObjectBehavior
 
         void UpdateAnimator()
         {
-            if (null == Animator)
+            if (null == Animator || !Animator.isActiveAndEnabled)
                 return;
 
             Animator.SetBool("isWalking", Walking);
