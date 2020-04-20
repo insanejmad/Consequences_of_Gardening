@@ -12,6 +12,7 @@ namespace GameObjectBehavior
     public class Interactable : MonoBehaviour
     {
         public InteractableEvent OnInteracted;
+        public bool ShowSpriteInsteadOfChangingMaterial = false;
         public bool IsHovered { get; private set; } = false;
         public Material HoverMaterial;
 
@@ -21,6 +22,9 @@ namespace GameObjectBehavior
         void Awake()
         {
             Sprite = GetComponent<SpriteRenderer>();
+
+            if (ShowSpriteInsteadOfChangingMaterial)
+                Sprite.enabled = false;
         }
 
         void Update()
@@ -28,6 +32,19 @@ namespace GameObjectBehavior
             if (IsHovered && Input.GetMouseButtonDown(0))
                 OnInteracted.Invoke();
 
+            if (ShowSpriteInsteadOfChangingMaterial)
+                UpdateSprite();
+            else
+                UpdateMaterial();
+        }
+
+        void UpdateSprite()
+        {
+            Sprite.enabled = IsHovered;
+        }
+
+        void UpdateMaterial()
+        {
             if (IsHovered && null == OriginalMaterial)
             {
                 OriginalMaterial = Sprite.material;
