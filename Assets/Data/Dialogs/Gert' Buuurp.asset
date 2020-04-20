@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   List:
   - Character: {fileID: 11400000, guid: f5641c674727ef04ab5d1d08be299c91, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
     - <b><color=#8B0000>Buuuuuurp</color></b> !
     - <b>Gmmmlmrmrgmg</b>.
