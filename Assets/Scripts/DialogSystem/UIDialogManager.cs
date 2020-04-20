@@ -25,6 +25,7 @@ namespace DialogSystem
         public Image RightAvatar;
         public Image Cursor;
         public Dialog Dialog;
+        public AudioSource VoiceAudio;
         public AudioClip OpenClip;
         public AudioClip CloseClip;
         public DialogEvent OnDialogFinished;
@@ -49,11 +50,13 @@ namespace DialogSystem
         void OnEnable()
         {
             Text.OnSentenceFinished.AddListener(OnFinishDialog);
+            Text.OnCharacterRevealed.AddListener(ReproduceSound);
         }
 
         void OnDisable()
         {
             Text.OnSentenceFinished.RemoveListener(OnFinishDialog);
+            Text.OnCharacterRevealed.RemoveListener(ReproduceSound);
         }
 
         void Awake() {
@@ -111,6 +114,15 @@ namespace DialogSystem
 
             Audio.clip = CurrentDialog.Clip;
             Audio.Play();
+        }
+
+        void ReproduceSound()
+        {
+            if (null == VoiceAudio || VoiceAudio.isPlaying || Character.VoiceClipList.Length == 0)
+                return;
+
+            VoiceAudio.clip = Character.VoiceClipList[Random.Range(0, Character.VoiceClipList.Length)];
+            VoiceAudio.Play();
         }
 
         void ResetAudio()

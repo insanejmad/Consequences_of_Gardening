@@ -14,5 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Francis
   Avatar: {fileID: 21300000, guid: a019451f8bc50f94ea0d9989359e2deb, type: 3}
-  SpeakSoundList: []
+  VoiceClipList:
+  - {fileID: 8300000, guid: 2bcc3d2ca0c45a84d94282bddd786840, type: 3}
+  - {fileID: 8300000, guid: 6375a9f8fe68c2747a26507d99cbddde, type: 3}
+  - {fileID: 8300000, guid: 8610370201b21b64daccc73d0ed7ad7d, type: 3}
+  - {fileID: 8300000, guid: 1cd1d5877cdada241acfffe5d583f282, type: 3}
+  - {fileID: 8300000, guid: 2bb73ed13b6270e40804e6d68c7cc2cd, type: 3}
+  - {fileID: 8300000, guid: 34ec236ab7330e7439b4865c6a9d381a, type: 3}
   DialogMeta: {fileID: 11400000, guid: 562548fd6d90b6f42b9476c59ae395fe, type: 2}

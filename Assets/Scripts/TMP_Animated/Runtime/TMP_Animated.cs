@@ -12,6 +12,7 @@ namespace TMPro {
     public class TMP_Animated : TextMeshProUGUI
     {
         public SentenceEvent OnSentenceFinished;
+        public SentenceEvent OnCharacterRevealed;
 
         [SerializeField] float Speed = 20;
         [SerializeField] float PauseTime = .5f;
@@ -48,6 +49,8 @@ namespace TMPro {
                         visibleCounter++;
                         maxVisibleCharacters++;
                         total_counter++;
+
+                        OnCharacterRevealed.Invoke();
 
                         if (Animated)
                             yield return new WaitForSeconds(1f / Speed);

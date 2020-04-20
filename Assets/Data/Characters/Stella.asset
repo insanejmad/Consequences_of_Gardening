@@ -14,5 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Stella
   Avatar: {fileID: 21300000, guid: a06f70fe04d250a498dfd4425278f1ee, type: 3}
-  SpeakSoundList: []
+  VoiceClipList:
+  - {fileID: 8300000, guid: 6d4763b152a105c4bb3e91f942968f6d, type: 3}
+  - {fileID: 8300000, guid: 475b83d96455a714bb559531d2f597d9, type: 3}
+  - {fileID: 8300000, guid: a5dc38f10d84eb54885d8570bf9ba8da, type: 3}
+  - {fileID: 8300000, guid: 8b05f656c57355b4f88ca483f852e9b6, type: 3}
+  - {fileID: 8300000, guid: 4b10b61cb4cba264b8282e39d2b6c9db, type: 3}
+  - {fileID: 8300000, guid: ba236e03f4ffa5a40acb88d654a2aea9, type: 3}
+  - {fileID: 8300000, guid: 092280fe7c73c39449e6772146c707db, type: 3}
   DialogMeta: {fileID: 11400000, guid: 562548fd6d90b6f42b9476c59ae395fe, type: 2}
