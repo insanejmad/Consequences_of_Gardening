@@ -7,6 +7,8 @@ namespace Lib.Struct
     public struct CharacterDialog
     {
         public Character Character;
+        public AudioClip Clip;
+        public bool ClipOverrideAmbiance;
         [TextArea] public List<string> Sentences;
     }
 }

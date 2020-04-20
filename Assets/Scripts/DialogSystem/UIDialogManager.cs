@@ -4,6 +4,7 @@ using UnityEngine.Events;
 using DG.Tweening;
 using TMPro;
 using Lib.Struct;
+using AmbianceSystem;
 
 namespace DialogSystem
 {
@@ -12,6 +13,7 @@ namespace DialogSystem
 
     [RequireComponent(typeof(CanvasGroup))]
     [RequireComponent(typeof(Image))]
+    [RequireComponent(typeof(AudioSource))]
     public class UIDialogManager : MonoBehaviour
     {
         public static UIDialogManager Instance;
@@ -23,6 +25,8 @@ namespace DialogSystem
         public Image RightAvatar;
         public Image Cursor;
         public Dialog Dialog;
+        public AudioClip OpenClip;
+        public AudioClip CloseClip;
         public DialogEvent OnDialogFinished;
         public bool InDialog { get; private set; } = false;
         public bool HasNextDialog { get; private set; } = false;
@@ -33,10 +37,12 @@ namespace DialogSystem
         int DialogIndex = 0;
         int SentenceIndex = 0;
         string CurrentSentence { get => CurrentDialog.Sentences[SentenceIndex]; }
+        bool AmbianceOverrided = false;
         Image Background;
         Image CurrentAvatar { get => PositionToDisplay == PositionType.LEFT ? LeftAvatar : RightAvatar; }
         CharacterDialog CurrentDialog { get => Dialog.List[DialogIndex]; }
         CanvasGroup CanvasGroup;
+        AudioSource Audio;
         Character Character;
         PositionType PositionToDisplay = PositionType.LEFT;
 
@@ -54,6 +60,8 @@ namespace DialogSystem
             Instance = this;
             Background = GetComponent<Image>();
             CanvasGroup = GetComponent<CanvasGroup>();
+            Audio = GetComponent<AudioSource>();
+
             DisplayDialogUI(false, 0, 0);
         }
 
@@ -85,6 +93,30 @@ namespace DialogSystem
                 Text.color = Character.DialogMeta.FontColor;
                 Cursor.color = Character.DialogMeta.FontColor;
             }
+        }
+
+        void UpdateAudio()
+        {
+            if (null == CurrentDialog.Clip) return;
+
+            if (CurrentDialog.ClipOverrideAmbiance)
+            {
+                AmbianceOverrided = true;
+
+                if (null != AmbianceManager.Switch)
+                    AmbianceManager.Switch(CurrentDialog.Clip);
+
+                return;
+            }
+
+            Audio.clip = CurrentDialog.Clip;
+            Audio.Play();
+        }
+
+        void ResetAudio()
+        {
+            Audio.Stop();
+            Audio.clip = null;
         }
 
         void HandlePlayerAction()
@@ -137,7 +169,19 @@ namespace DialogSystem
             s.Append(CanvasGroup.transform.DOScale(show ? 1 : 0, time).SetEase(show ? Ease.OutBack : Ease.InBack));
 
             if (show)
-                s.AppendCallback(() => Text.Read(CurrentSentence));
+            {
+                Audio.clip = OpenClip;
+                Audio.PlayDelayed(delay / 2);
+
+                s.AppendCallback(() => {
+                    Text.Read(CurrentSentence);
+                    UpdateAudio();
+                });
+            } else if (time != 0) {
+                Audio.clip = CloseClip;
+                Audio.Play();
+            }
+
 
             return s;
         }
@@ -146,6 +190,11 @@ namespace DialogSystem
         {
             if (!TextWasRead)
                 Text.AvoidAnimation();
+
+            if (AmbianceOverrided && null != AmbianceManager.Reset)
+                AmbianceManager.Reset();
+            else
+                ResetAudio();
 
             return DisplayDialogUI(false, DialogOpenSpeed, 0).AppendCallback(() => {
                 InDialog = false;

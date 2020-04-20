@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: 
   Avatar: {fileID: 0}
-  DialogMeta: {fileID: 0}
+  SpeakSoundList: []
+  DialogMeta: {fileID: 11400000, guid: 562548fd6d90b6f42b9476c59ae395fe, type: 2}

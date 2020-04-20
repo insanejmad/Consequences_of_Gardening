@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using GameObjectBehavior;
 using DialogSystem;
+using AmbianceSystem;
 
 
 [RequireComponent(typeof(Interactable))]
@@ -15,6 +16,7 @@ public class PNJ : MonoBehaviour
     public static PNJEvent OnDied;
 
     public Character Info;
+    public AudioClip DieClip;
     public Dialog PendingDialog;
     public Dialog ValidDialog;
     public List<Item> ItemToObtainList = new List<Item>();
@@ -72,13 +74,18 @@ public class PNJ : MonoBehaviour
 
     void QuestFinished() {
         UIDialogManager.Instance.OnDialogFinished.RemoveListener(QuestFinished);
-        OnQuestFinished.Invoke(this);
+
+        if (null != OnQuestFinished)
+            OnQuestFinished(this);
     }
 
     void Die()
     {
         Died = true;
         gameObject.SetActive(false);
+
+        if (null != DieClip && null != AmbianceManager.Switch)
+            AmbianceManager.Switch(DieClip);
 
         if (null != OnDied)
             OnDied(this);
