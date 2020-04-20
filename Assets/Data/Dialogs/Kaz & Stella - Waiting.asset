@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c2b114ad8beba441b71a2fe992af3ed, type: 3}
+  m_Name: Kaz & Stella - Waiting
+  m_EditorClassIdentifier: 
+  List:
+  - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Sentences:
+    - Yes?
+  - Character: {fileID: 11400000, guid: 8a717a6903e723146b10c3484c778496, type: 2}
+    Sentences:
+    - Hiii, handsooome gentlemaan! Is this seat taken?
+  - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Sentences:
+    - ... (Is it common to call people that in casual social interactions, or am
+      I handsome and  a gentleman?)
+  - Character: {fileID: 11400000, guid: 8a717a6903e723146b10c3484c778496, type: 2}
+    Sentences:
+    - 'Do you like the atmosphere?  '
+    - This jazzy song is super cool, right?!
+    - ' In this kind of atmosphere, everyone feels so close... I loooove lounge bars.'
+    - You come here often?
+  - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Sentences:
+    - Just sometimes.
+  - Character: {fileID: 11400000, guid: 8a717a6903e723146b10c3484c778496, type: 2}
+    Sentences:
+    - 'Yeah, I know, rigth? I could come here everyday. '
+    - Cocktails here taste so good.
+    - 'Have you gotten one yet? '
+    - The bartender too, he's got magical fingers...
+    - Anyways, are you enjoying yourself?
+  - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Sentences:
+    - Ah? Huh, y-yeah. Kinda.
+    - ' And erm... do <b>you</b> come here often?'
+  - Character: {fileID: 11400000, guid: 8a717a6903e723146b10c3484c778496, type: 2}
+    Sentences:
+    - '*rolling her eyes* Well, actually... y''know. Not really!  '
+    - 'Since my gamepad broke, I can''t play with my friends anymore. '
+    - We were planning on going out tonight, but they were a <b>TOTAL</b> no show!
+    - And now am here on my own...
+  - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Sentences:
+    - ... (I don't know what to say... I read somewhere that if you ignore kids long
+      enough, they leave on their own out of boredom.)
+    - ... (She's not a kid, but let's try that all the same.)
