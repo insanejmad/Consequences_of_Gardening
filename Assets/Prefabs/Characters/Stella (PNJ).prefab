@@ -101,7 +101,7 @@ PrefabInstance:
     - target: {fileID: 8027623309440725287, guid: c02716081c214884e85be5857881bcfe,
         type: 3}
       propertyPath: m_Name
-      value: Stella
+      value: Stella (PNJ)
       objectReference: {fileID: 0}
     - target: {fileID: 8027623309440725287, guid: c02716081c214884e85be5857881bcfe,
         type: 3}
@@ -109,6 +109,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000,
         type: 0}
+    - target: {fileID: 8027623309440725292, guid: c02716081c214884e85be5857881bcfe,
+        type: 3}
+      propertyPath: ItemToObtainList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8027623309440725292, guid: c02716081c214884e85be5857881bcfe,
         type: 3}
       propertyPath: PendingDialog
@@ -120,6 +125,12 @@ PrefabInstance:
       propertyPath: ValidDialog
       value: 
       objectReference: {fileID: 11400000, guid: 9557c9530eb6cd04e9aaa8c9436df374,
+        type: 2}
+    - target: {fileID: 8027623309440725292, guid: c02716081c214884e85be5857881bcfe,
+        type: 3}
+      propertyPath: ItemToObtainList.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 4f27bff9583b2a743affe80f54c15776,
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c02716081c214884e85be5857881bcfe, type: 3}
