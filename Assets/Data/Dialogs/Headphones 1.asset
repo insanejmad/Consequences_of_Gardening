@@ -14,7 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   List:
   - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Clip: {fileID: 8300000, guid: dd6e579bf8d5cdb48aab09e609e2e8c9, type: 3}
+    ClipOverrideAmbiance: 0
     Sentences:
-    - Oohh, it's Eqkter's last track! Sounds nice.
-    - ' I love his work, guy''s a genius.'
-    - ' I think Gert'' likes him too, always smoothly shaking to his beats.'
+    - Oohh, it's <b><color=#BDB76B>Eqkter's</color></b> last track!
+    - Sounds nice.
+    - ' I love his work, guy''s a <b><color=#8B0000>genius</color></b>.'
+    - ' I think <b><color=#BDB76B>Gert''</color></b> likes him too, always smoothly
+      shaking to his beats.'

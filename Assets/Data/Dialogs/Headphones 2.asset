@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   List:
   - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Clip: {fileID: 8300000, guid: 797e99c4168cc574ca5d8404e09f50ad, type: 3}
+    ClipOverrideAmbiance: 0
     Sentences:
     - ...

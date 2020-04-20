@@ -14,6 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   List:
   - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
-    - 'This sign points to one of the headsets and it says "Don''t listen!". '
-    - I really want to listen, now.
+    - 'This sign points to one of the headsets and it says "<b><color=#8B0000>Don''t
+      listen</color></b>". '
+    - I really want to listen, <b><color=#8B0000>now</color></b>.
