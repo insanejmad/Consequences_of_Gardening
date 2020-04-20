@@ -10,16 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7c2b114ad8beba441b71a2fe992af3ed, type: 3}
-  m_Name: My Gert'
+  m_Name: Gert' say something
   m_EditorClassIdentifier: 
   List:
-  - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
-    Sentences:
-    - <b><color=#BDB76B>Gertrude</color></b>.
-    - My <b><color=#BDB76B>Gert'</color></b>.
-    - Grew so big, didn't even realize.
-    - I still remember when it would feed on flies and regular nutrients... Ah, is
-      it a <b><color=#8B0000>tear</color></b> I am shedding?
   - Character: {fileID: 11400000, guid: f5641c674727ef04ab5d1d08be299c91, type: 2}
     Sentences:
-    - <b><color=#8B0000>Gmmmlmrmrgmg</color></b>.
+    - <b>Gmmmlmrmrgmg</b>.

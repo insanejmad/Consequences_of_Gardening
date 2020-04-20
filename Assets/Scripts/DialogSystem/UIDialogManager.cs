@@ -142,22 +142,22 @@ namespace DialogSystem
             return s;
         }
 
-        public void StopDialog()
+        public Sequence StopDialog()
         {
             if (!TextWasRead)
                 Text.AvoidAnimation();
 
-            Dialog = null;
-            Character = null;
-            DialogIndex = 0;
-            SentenceIndex = 0;
-            InDialog = false;
-            HasNextDialog = false;
-            HasNextSentence = false;
-            CanStop = false;
-            PositionToDisplay = PositionType.LEFT;
+            return DisplayDialogUI(false, DialogOpenSpeed, 0).AppendCallback(() => {
+                InDialog = false;
+                Dialog = null;
+                Character = null;
+                DialogIndex = 0;
+                SentenceIndex = 0;
+                HasNextDialog = false;
+                HasNextSentence = false;
+                CanStop = false;
+                PositionToDisplay = PositionType.LEFT;
 
-            DisplayDialogUI(false, DialogOpenSpeed, 0).AppendCallback(() => {
                 OnDialogFinished.Invoke();
             });
         }
