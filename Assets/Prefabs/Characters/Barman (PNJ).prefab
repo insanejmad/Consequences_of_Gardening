@@ -274,6 +274,18 @@ PrefabInstance:
       propertyPath: CanBeEat
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8027623309440725292, guid: c02716081c214884e85be5857881bcfe,
+        type: 3}
+      propertyPath: PendingDialog
+      value: 
+      objectReference: {fileID: 11400000, guid: 89f1197b423247d4d8c240ccf6089690,
+        type: 2}
+    - target: {fileID: 8027623309440725292, guid: c02716081c214884e85be5857881bcfe,
+        type: 3}
+      propertyPath: ValidDialog
+      value: 
+      objectReference: {fileID: 11400000, guid: a468ca0c8014e1d4ebacdd53131bc9ee,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c02716081c214884e85be5857881bcfe, type: 3}
 --- !u!1 &7652075657775511407 stripped
