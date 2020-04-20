@@ -389,7 +389,7 @@ PrefabInstance:
     - target: {fileID: 1243508779241738930, guid: 5a0cb4a74af2bf24db358b15836fb89d,
         type: 3}
       propertyPath: m_Name
-      value: Counter (1)
+      value: Seat+
       objectReference: {fileID: 0}
     - target: {fileID: 1408342316200728088, guid: 5a0cb4a74af2bf24db358b15836fb89d,
         type: 3}
