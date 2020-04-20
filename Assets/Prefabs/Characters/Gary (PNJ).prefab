@@ -111,6 +111,11 @@ PrefabInstance:
         type: 0}
     - target: {fileID: 8027623309440725292, guid: c02716081c214884e85be5857881bcfe,
         type: 3}
+      propertyPath: ItemToObtainList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8027623309440725292, guid: c02716081c214884e85be5857881bcfe,
+        type: 3}
       propertyPath: Info
       value: 
       objectReference: {fileID: 11400000, guid: ec607722bf19b524887f139ec403995d,
@@ -126,6 +131,18 @@ PrefabInstance:
       propertyPath: ValidDialog
       value: 
       objectReference: {fileID: 11400000, guid: f259af0eee946174a85eab57362ab809,
+        type: 2}
+    - target: {fileID: 8027623309440725292, guid: c02716081c214884e85be5857881bcfe,
+        type: 3}
+      propertyPath: ItemToObtainList.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: dc74a78d3dd3e7a41a135cc78f1f9e73,
+        type: 2}
+    - target: {fileID: 8027623309440725292, guid: c02716081c214884e85be5857881bcfe,
+        type: 3}
+      propertyPath: ItemToObtainList.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 6277c051672bdfd4b8b03d50c9223d96,
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c02716081c214884e85be5857881bcfe, type: 3}
