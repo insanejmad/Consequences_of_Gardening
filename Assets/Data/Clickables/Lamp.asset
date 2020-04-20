@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 36825a184c8462e4ba8a95cf1634fea9, type: 3}
-  m_Name: watering can
+  m_Name: Lamp
   m_EditorClassIdentifier: 
-  ItemName: Watering can
-  Description: a watering can
-  InventoryDescription: my watering can
-  Sprite: {fileID: 21300000, guid: 1a8691fa7f3f9ee44b2907425999f049, type: 3}
-  InspectDialog: {fileID: 11400000, guid: 0a145531ba43c0246952496ebe209bf5, type: 2}
+  ItemName: Lamp
+  Description: 
+  InventoryDescription: 
+  Sprite: {fileID: 21300000, guid: d413fbf570353ab409a5315e00478b01, type: 3}
+  InspectDialog: {fileID: 11400000, guid: 70d844cc903994445874bab04db18adb, type: 2}

@@ -15,6 +15,7 @@ public class ClickableObject : MonoBehaviour
     [SerializeField] private Item item = null;
     [SerializeField] private string itemNeeded = null;
     [SerializeField] private string characterToBeDead = null;
+    [SerializeField] private Dialog conditionsFailDialog = null;
     [Header("CustomEvents")]
     [SerializeField] private UnityEvent onTake = null;
     [SerializeField] private UnityEvent onInspect = null;
@@ -43,7 +44,7 @@ public class ClickableObject : MonoBehaviour
             if (itemNeeded != null && itemNeeded != "")
                 itemCondition = PlayerInventory.instance.ContainsItem(itemNeeded);
             if (characterToBeDead != null && characterToBeDead != "") {
-                //    characterToBeDead = WIP;
+                //characterCondition = WIP;
             }
 
             return (itemCondition && characterCondition);
@@ -124,10 +125,14 @@ public class ClickableObject : MonoBehaviour
             Debug.LogError("item dialog not found");
             return;
         }
-        if (UIDialogManager.Instance)
-            UIDialogManager.Instance.Dialog = item.InspectDialog;
-        else
-            Debug.LogError("No instance of UIDialogManager");
+	if (UIDialogManager.Instance) {
+	    if (TakeConditions)
+		UIDialogManager.Instance.Dialog = item.InspectDialog;
+	    else
+		UIDialogManager.Instance.Dialog = conditionsFailDialog;
+	}
+	else
+	    Debug.LogError("No instance of UIDialogManager");
     }
 
     #endregion
