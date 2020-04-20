@@ -7,6 +7,7 @@ using DialogSystem;
 
 
 [RequireComponent(typeof(Interactable))]
+[RequireComponent(typeof(Walkable))]
 public class PNJ : MonoBehaviour
 {
     public delegate void PNJEvent(PNJ pnj);
@@ -18,6 +19,7 @@ public class PNJ : MonoBehaviour
     public Dialog ValidDialog;
     public List<Item> ItemToObtainList = new List<Item>();
 
+    bool Died = false;
     bool AllItemObtained {
         get {
             foreach (Item item in ItemToObtainList) {
@@ -29,10 +31,18 @@ public class PNJ : MonoBehaviour
     }
 
     Interactable Interactable;
+    Walkable Walkable;
 
     void Awake()
     {
         Interactable = GetComponent<Interactable>();
+        Walkable = GetComponent<Walkable>();
+    }
+
+    void Update()
+    {
+        if (Walkable.IsFinished && !Died)
+            Die();
     }
 
     void OnEnable()
@@ -67,6 +77,10 @@ public class PNJ : MonoBehaviour
 
     void Die()
     {
-        OnDied.Invoke(this);
+        Died = true;
+        gameObject.SetActive(false);
+
+        if (null != OnDied)
+            OnDied(this);
     }
 }
