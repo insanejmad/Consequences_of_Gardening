@@ -17,6 +17,7 @@ public class PNJ : MonoBehaviour
 
     public bool TriggerOnQuestFinished = true;
     public bool TriggerOnDie = true;
+    public bool DisableOnAwake = false;
 
     public Character Info;
     public AudioClip DieClip;
@@ -42,6 +43,9 @@ public class PNJ : MonoBehaviour
     {
         Interactable = GetComponent<Interactable>();
         Walkable = GetComponent<Walkable>();
+
+        if (DisableOnAwake)
+            gameObject.SetActive(false);
     }
 
     void Update()
