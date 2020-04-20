@@ -13,6 +13,7 @@ public class Item : ScriptableObject
     public string InventoryDescription;
 
     public Sprite Sprite;
+    public Sprite InventorySprite;
 
     public Dialog InspectDialog;
 }
