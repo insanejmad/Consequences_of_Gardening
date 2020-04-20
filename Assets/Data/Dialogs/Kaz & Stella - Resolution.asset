@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c2b114ad8beba441b71a2fe992af3ed, type: 3}
+  m_Name: Kaz & Stella - Resolution
+  m_EditorClassIdentifier: 
+  List:
+  - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Sentences:
+    - Yes?
+  - Character: {fileID: 11400000, guid: 8a717a6903e723146b10c3484c778496, type: 2}
+    Sentences:
+    - Hiii, handsooome gentlemaan! Is this seat taken?
+  - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Sentences:
+    - ... (Is it common to call people that in casual social interactions)
+  - Character: {fileID: 11400000, guid: 8a717a6903e723146b10c3484c778496, type: 2}
+    Sentences:
+    - 'Do you like the atmosphere?  '
+    - This jazzy song is super cool, right?!
+    - ' In this kind of atmosphere, everyone feels so close... I loooove lounge bars.'
+    - You come here often?
+  - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Sentences:
+    - Just sometimes.
+  - Character: {fileID: 11400000, guid: 8a717a6903e723146b10c3484c778496, type: 2}
+    Sentences:
+    - 'Yeah, I know, rigth? I could come here everyday. '
+    - Cocktails here taste so good.
+    - 'Have you gotten one yet? '
+    - The bartender too, he's got magical fingers...
+    - Anyways, are you enjoying yourself?
+  - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Sentences:
+    - Ah? Huh, y-yeah. Kinda.
+    - ' And erm... do <b>you</b> come here often?'
+  - Character: {fileID: 11400000, guid: 8a717a6903e723146b10c3484c778496, type: 2}
+    Sentences:
+    - '*rolling her eyes* Well, actually... y''know. Not really!  '
+    - 'Since my gamepad broke, I can''t play with my friends anymore. '
+    - We were planning on going out tonight, but they were a <b>TOTAL</b> no show!
+    - And now am here on my own...
+  - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Sentences:
+    - ... wait. Maybe I can help you with that, actually. *smiles faintly*
+  - Character: {fileID: 11400000, guid: 8a717a6903e723146b10c3484c778496, type: 2}
+    Sentences:
+    - '*raises an eyebrow, reajusting her seat* Really...? Tell me more... And tell
+      me about you, what do you like?'
+  - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Sentences:
+    - '*surprisingly enthusiastic* I like plants!'
+  - Character: {fileID: 11400000, guid: 8a717a6903e723146b10c3484c778496, type: 2}
+    Sentences:
+    - Alright, we got a rare seed here... *wink*
+  - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Sentences:
+    - I'm quite good at keeping humid environments for them to thrives.
+  - Character: {fileID: 11400000, guid: 8a717a6903e723146b10c3484c778496, type: 2}
+    Sentences:
+    - R-Really. *vents herself with a hand* I imagine that's not that easy, got any
+      proof, Don Juan?
+  - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Sentences:
+    - 'Yeah, I guess am quite good at caring for things, and serving all their needs
+      and desires. '
+    - I mean, my flat is proof enough of that.
+  - Character: {fileID: 11400000, guid: 8a717a6903e723146b10c3484c778496, type: 2}
+    Sentences:
+    - I like that in a man...
+  - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Sentences:
+    - 'You just have to listen, you know ? '
+    - Or well, look for subtle cues.
+  - Character: {fileID: 11400000, guid: 8a717a6903e723146b10c3484c778496, type: 2}
+    Sentences:
+    - 'Why don''t we continue this conversation somewhere a little bit more... quiet. '
+    - 'I know! Let''s go back to yours! '
+    - And you can show me your proof.
+  - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Sentences:
+    - 'Don''t you want a new controller? '
+    - I have one right here.
+  - Character: {fileID: 11400000, guid: 8a717a6903e723146b10c3484c778496, type: 2}
+    Sentences:
+    - You can give it to me afterwards !
+  - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Sentences:
+    - Huh? Hu... okay. (Well... that was unexpectedly easy.)
