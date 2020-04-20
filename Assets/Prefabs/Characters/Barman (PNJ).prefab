@@ -269,6 +269,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barman (PNJ)
       objectReference: {fileID: 0}
+    - target: {fileID: 8027623309440725287, guid: c02716081c214884e85be5857881bcfe,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 8027623309440725292, guid: c02716081c214884e85be5857881bcfe,
         type: 3}
       propertyPath: CanBeEat
@@ -286,6 +292,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: a468ca0c8014e1d4ebacdd53131bc9ee,
         type: 2}
+    - target: {fileID: 8027623309440725292, guid: c02716081c214884e85be5857881bcfe,
+        type: 3}
+      propertyPath: TriggerOnDie
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8027623309440725292, guid: c02716081c214884e85be5857881bcfe,
+        type: 3}
+      propertyPath: TriggerOnQuestFinished
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c02716081c214884e85be5857881bcfe, type: 3}
 --- !u!1 &7652075657775511407 stripped

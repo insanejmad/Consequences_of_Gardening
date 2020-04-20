@@ -15,7 +15,9 @@ public class PNJ : MonoBehaviour
     public static PNJEvent OnQuestFinished;
     public static PNJEvent OnDied;
 
-    public bool CanBeEat = true;
+    public bool TriggerOnQuestFinished = true;
+    public bool TriggerOnDie = true;
+
     public Character Info;
     public AudioClip DieClip;
     public Dialog PendingDialog;
@@ -44,7 +46,7 @@ public class PNJ : MonoBehaviour
 
     void Update()
     {
-        if (Walkable.IsFinished && !Died && CanBeEat)
+        if (Walkable.IsFinished && !Died && TriggerOnDie)
             Die();
     }
 
@@ -68,7 +70,7 @@ public class PNJ : MonoBehaviour
         if (AllItemObtained) {
             dialog = ValidDialog;
 
-            if (CanBeEat)
+            if (TriggerOnQuestFinished)
                 UIDialogManager.Instance.OnDialogFinished.AddListener(QuestFinished);
         }
 
