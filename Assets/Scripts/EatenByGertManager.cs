@@ -28,7 +28,6 @@ public class EatenByGertManager : MonoBehaviour
 
     void OnPNJDied(PNJ pnj)
     {
-        Debug.Log("PNJ DIED!!!");
         Animator.enabled = true;
     }
 
