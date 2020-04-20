@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c2b114ad8beba441b71a2fe992af3ed, type: 3}
+  m_Name: Kaz & Stella - Death Part1
+  m_EditorClassIdentifier: 
+  List:
+  - Character: {fileID: 11400000, guid: 8a717a6903e723146b10c3484c778496, type: 2}
+    Sentences:
+    - Hooooo! Your flat is SO cool.
+    - I mean, I could totes live here.
+    - 'Wanna show a lady around? '
+    - Then we can have some fun...
+  - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Sentences:
+    - Sure. That's... erm... where I live. *points to living room*
+  - Character: {fileID: 11400000, guid: 8a717a6903e723146b10c3484c778496, type: 2}
+    Sentences:
+    - What is this for? And this? Wow, you got so many things.
+    - Could you teach me how to use this?  I would love that.
+    - ' Oooh a kitty! Meow meow!'
+    - What's the name?
+  - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Sentences:
+    - Ghosty.
+  - Character: {fileID: 11400000, guid: 8a717a6903e723146b10c3484c778496, type: 2}
+    Sentences:
+    - You didn't lie, you really do have a LOT of plants.
+    - And this one is so <b>BIG</b>!
+    - ' It''s even bigger than me!'
+    - Not like am very tall, y'know. Is it some kinda tree?
+    - It looks like it could swallow me whole, ahahahahaha.
+  - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Sentences:
+    - That's... actually very accurate.
