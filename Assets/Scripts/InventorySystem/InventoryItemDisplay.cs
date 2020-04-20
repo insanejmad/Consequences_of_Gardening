@@ -32,7 +32,7 @@ public class InventoryItemDisplay : MonoBehaviour
 
     private void InitializeNewItem()
     {
-        Srenderer.sprite = item.Sprite;
+        Srenderer.sprite = item.InventorySprite != null ? item.InventorySprite : item.Sprite;
         hoverName = item.ItemName;
         description = item.InventoryDescription;
         transform.localScale = Vector3.one ;
