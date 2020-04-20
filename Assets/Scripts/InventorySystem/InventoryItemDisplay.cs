@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class InventoryItemDisplay : MonoBehaviour
 {
     private Item item;
-    SpriteRenderer Srenderer;
+    Image Srenderer;
 
     public string hoverName;
     public string description;
@@ -20,7 +20,8 @@ public class InventoryItemDisplay : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        Srenderer = gameObject.AddComponent<SpriteRenderer>();
+        Srenderer = gameObject.AddComponent<Image>();
+        GetComponent<RectTransform>().sizeDelta = new Vector2(90f, 60f);
     }
 
     public void SetItem(Item itemtoset)
@@ -34,7 +35,7 @@ public class InventoryItemDisplay : MonoBehaviour
         Srenderer.sprite = item.Sprite;
         hoverName = item.ItemName;
         description = item.InventoryDescription;
-        transform.localScale = Vector3.one * 450f;
+        transform.localScale = Vector3.one ;
         BoxCollider2D collider = gameObject.AddComponent<BoxCollider2D>();
         collider.isTrigger = true;
 

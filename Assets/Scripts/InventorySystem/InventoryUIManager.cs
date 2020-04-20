@@ -26,12 +26,14 @@ public class InventoryUIManager : MonoBehaviour
     public void CreateInventoryItem(Item item)
     {
         GameObject obj = new GameObject();
-        obj.transform.SetParent(inventoryBackground.transform,false);
         obj.AddComponent<RectTransform>();
-        obj.transform.localPosition = new Vector3(0f,0f,-1f);
+
+        obj.GetComponent<RectTransform>().localPosition = new Vector3(0f,0f,-1f);
         InventoryItemDisplay ItemDisplay = obj.AddComponent<InventoryItemDisplay>();
         ItemDisplay.TextPrefab = TextPrefab;
         ItemDisplay.SetItem(item);
+        obj.transform.SetParent(inventoryBackground.transform, false);
+
         InventoryUIObjectsDict.Add(item.ItemName, obj);
     }
 
