@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 36825a184c8462e4ba8a95cf1634fea9, type: 3}
-  m_Name: watering can
+  m_Name: Magnet
   m_EditorClassIdentifier: 
-  ItemName: Watering can
-  Description: a watering can
-  InventoryDescription: A watercan. It won't help me outside of the flat.
-  Sprite: {fileID: 21300000, guid: 1a8691fa7f3f9ee44b2907425999f049, type: 3}
-  InspectDialog: {fileID: 11400000, guid: 0a145531ba43c0246952496ebe209bf5, type: 2}
+  ItemName: Magnet
+  Description: 
+  InventoryDescription: A strong magnet, strong enough to destroy a hard drive form
+    few centimeters away.
+  Sprite: {fileID: 21300000, guid: 7f0eada5986838749a930b9d72283fcb, type: 3}
+  InspectDialog: {fileID: 11400000, guid: f4b88b135be4f914a9623252d2097398, type: 2}
