@@ -35,6 +35,7 @@ public class GameManager : MonoBehaviour
     public List<Scene> SceneList;
     public string currentScene;
 
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -91,6 +92,22 @@ public class GameManager : MonoBehaviour
 
 
         //Find all the PNJ scripts with the npc tags, if any are dead, deactivate their gameobject
+        ReloadCurrentCharacters();
+    }
+
+    private void ReloadCurrentCharacters()
+    {
+        CurrentCharacterList.Clear();
+        PNJ[] goarray = GameObject.FindObjectsOfType<PNJ>();
+        foreach(PNJ component in goarray)
+        {
+            Character info = component.GetComponent<PNJ>().Info;
+            CurrentCharacterList.Add(info);
+            if(CharacterStateDict[info.name].state == CharacterStatus.DEAD)
+            {
+                component.gameObject.SetActive(false);
+            }
+        }
     }
 
     public void CharacterToBeEaten(PNJ pnj)
