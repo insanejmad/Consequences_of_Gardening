@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c2b114ad8beba441b71a2fe992af3ed, type: 3}
+  m_Name: Kaz & Francis - Death Part1
+  m_EditorClassIdentifier: 
+  List:
+  - Character: {fileID: 11400000, guid: 0c9901e5d3c38e14780a1e6a8b192546, type: 2}
+    Sentences:
+    - 'Well, that was some ride! Did you walk all that way? '
+    - 'You''re an athlete, kid! '
+    - Quiet part of town, too. Lucky man.
+  - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Sentences:
+    - I do enjoy that.
+  - Character: {fileID: 11400000, guid: 0c9901e5d3c38e14780a1e6a8b192546, type: 2}
+    Sentences:
+    - No wonder! So, where's that broken machine you told me 'bout?
+  - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Sentences:
+    - There. *points toward computer*
+  - Character: {fileID: 11400000, guid: 0c9901e5d3c38e14780a1e6a8b192546, type: 2}
+    Sentences:
+    - 'I''ll get to it, then! ...oh boy. That''s some beast you got there, heh? '
+    - You some kind of scientist, to make such a thing? GMOS, or whatnot. *approching
+      Gert'*
+    - 'These are roots, alright. '
+    - 'And they move! Nice grip, too. Ho hoh. '
+    - 'Never seen anything quite like this before.  '
+  - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Sentences:
+    - Bon appetit, Gert'.
