@@ -3,12 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+[System.Serializable]
+public class SceneItem
+{
+    public string name;
+    public Sprite icon;
+}
+
 public class SceneSwitcherUIManager : MonoBehaviour
 {
 
     public static SceneSwitcherUIManager instance = null;
 
-    public List<string> ScenesList;
+    public List<SceneItem> ScenesList;
 
     public GameObject container;
 
@@ -32,13 +39,16 @@ public class SceneSwitcherUIManager : MonoBehaviour
 
     public void InitializeButtons()
     {
-        foreach (string name in ScenesList)
+        foreach (var item in ScenesList)
         {
+	    Image img = null;
             GameObject obj = Instantiate(ButtonPrefab) as GameObject;
-            obj.GetComponent<SceneChangeButton>().SceneName = name;
+	    img = obj.GetComponent<Image>();
+	    img.preserveAspect = true;
+	    img.sprite = item.icon;
+            obj.GetComponent<SceneChangeButton>().SceneName = item.name;
             obj.transform.SetParent(container.transform, false);
-            obj.transform.GetChild(0).gameObject.GetComponent<Text>().text = name;
-            }
+        }
         container.SetActive(false);
     }
 
