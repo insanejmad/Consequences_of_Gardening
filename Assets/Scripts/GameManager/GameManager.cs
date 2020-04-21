@@ -30,6 +30,8 @@ public class GameManager : MonoBehaviour
     public List<GameObject> CurrentCharacterList;
 
 
+    bool Stop = false;
+
     void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -51,6 +53,18 @@ public class GameManager : MonoBehaviour
         }
         else
             Destroy(gameObject);
+    }
+
+    void Update()
+    {
+        if (Stop) return;
+
+        foreach(var kvp in CharacterStateDict)
+            if(kvp.Value.state != CharacterStatus.DEAD)
+                return;
+
+        Stop = true;
+        StartCoroutine(TheEnd());
     }
 
     void InitializeDictionaries()
@@ -138,4 +152,9 @@ public class GameManager : MonoBehaviour
         CharacterStateDict[pnj.Info.Name].state = CharacterStatus.DEAD;
     }
 
+    IEnumerator TheEnd()
+    {
+        yield return new WaitForSeconds(8f);
+        SceneManager.LoadScene("End");
+    }
 }
