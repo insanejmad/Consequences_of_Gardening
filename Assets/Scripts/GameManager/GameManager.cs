@@ -29,8 +29,7 @@ public class GameManager : MonoBehaviour
 
     public List<GameObject> CurrentCharacterList;
 
-
-    bool Stop = false;
+    int DeathCount = 0;
 
     void OnEnable()
     {
@@ -53,18 +52,6 @@ public class GameManager : MonoBehaviour
         }
         else
             Destroy(gameObject);
-    }
-
-    void Update()
-    {
-        if (Stop) return;
-
-        foreach(var kvp in CharacterStateDict)
-            if(kvp.Value.state != CharacterStatus.DEAD)
-                return;
-
-        Stop = true;
-        StartCoroutine(TheEnd());
     }
 
     void InitializeDictionaries()
@@ -150,6 +137,10 @@ public class GameManager : MonoBehaviour
     public void KillCharacter(PNJ pnj)
     {
         CharacterStateDict[pnj.Info.Name].state = CharacterStatus.DEAD;
+        DeathCount++;
+
+        if (DeathCount == CharactersList.Count)
+            StartCoroutine(TheEnd());
     }
 
     IEnumerator TheEnd()
