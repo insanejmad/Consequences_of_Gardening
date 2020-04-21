@@ -26,6 +26,30 @@ TextureImporter:
   - first:
       213: -1190975350752772504
     second: Gert_7
+  - first:
+      213: 6515623444327655575
+    second: Gert_0
+  - first:
+      213: 825786593108191035
+    second: Gert_1
+  - first:
+      213: 3490274684433028987
+    second: Gert_2
+  - first:
+      213: -9096527840905632206
+    second: Gert_3
+  - first:
+      213: 3897069567064757753
+    second: Gert_4
+  - first:
+      213: -1345503978854092814
+    second: Gert_5
+  - first:
+      213: -7861127685140789482
+    second: Gert_6
+  - first:
+      213: -3662485822634637026
+    second: Gert_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -137,8 +161,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 007c0584c19bb12e0800000000000000
-      internalID: -2153924465643174144
+      spriteID: 7986b5950052c6a50800000000000000
+      internalID: 6515623444327655575
       vertices: []
       indices: 
       edges: []
@@ -158,8 +182,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e0f00ed586d66990800000000000000
-      internalID: -7392985867838492443
+      spriteID: b376e7ef788c57b00800000000000000
+      internalID: 825786593108191035
       vertices: []
       indices: 
       edges: []
@@ -179,8 +203,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d5be9955f890b1800800000000000000
-      internalID: 584071087895735133
+      spriteID: b775b2e4552ff6030800000000000000
+      internalID: 3490274684433028987
       vertices: []
       indices: 
       edges: []
@@ -200,8 +224,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b324d7ea090f060f0800000000000000
-      internalID: -1125635402649222597
+      spriteID: 2366e59cf14a2c180800000000000000
+      internalID: -9096527840905632206
       vertices: []
       indices: 
       edges: []
@@ -221,8 +245,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 587f4766a659ac8c0800000000000000
-      internalID: -3978203036610398331
+      spriteID: 9f551e9af1c251630800000000000000
+      internalID: 3897069567064757753
       vertices: []
       indices: 
       edges: []
@@ -231,7 +255,7 @@ TextureImporter:
       name: Gert_5
       rect:
         serializedVersion: 2
-        x: 179
+        x: 180
         y: 0
         width: 180
         height: 180
@@ -242,8 +266,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c8561f6010e3f46d0800000000000000
-      internalID: -3004114252300458612
+      spriteID: 2ffe680924fc35de0800000000000000
+      internalID: -1345503978854092814
       vertices: []
       indices: 
       edges: []
@@ -263,8 +287,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9fd01ed53f7b8bea0800000000000000
-      internalID: -5856729059515363847
+      spriteID: 617c139350aa7e290800000000000000
+      internalID: -7861127685140789482
       vertices: []
       indices: 
       edges: []
@@ -284,8 +308,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 86e72228a3ec87fe0800000000000000
-      internalID: -1190975350752772504
+      spriteID: e1945fa8c8c3c2dc0800000000000000
+      internalID: -3662485822634637026
       vertices: []
       indices: 
       edges: []
