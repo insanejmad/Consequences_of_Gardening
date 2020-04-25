@@ -13,17 +13,15 @@ public class ClickableObject : MonoBehaviour
     public bool isTakeble = true;
     [SerializeField] private SpriteRenderer spriteRenderer = null;
     [SerializeField] private Item item = null;
-    [SerializeField] private string itemNeeded = null;
-    [SerializeField] private string characterToBeDead = null;
-    [SerializeField] private Dialog conditionsFailDialog = null;
     [Header("CustomEvents")]
     [SerializeField] private UnityEvent onTake = null;
     [SerializeField] private UnityEvent onInspect = null;
 
     private Interactable _interactable = null;
-
     private const float _takeAnimationTime = 0.2f;
+    private bool m_takeConditions = false;
 
+#region GETTERS
     public bool IsInspectable
     {
         get => (item && item.InspectDialog);
@@ -36,25 +34,15 @@ public class ClickableObject : MonoBehaviour
 
     public bool TakeConditions
     {
-        get
-        {
-            bool itemCondition = true;
-            bool characterCondition = true;
-
-            if (itemNeeded != null && itemNeeded != "")
-                itemCondition = PlayerInventory.instance.ContainsItem(itemNeeded);
-            if (characterToBeDead != null && characterToBeDead != "") {
-                //characterCondition = WIP;
-            }
-
-            return (itemCondition && characterCondition);
-        }
+        get => m_takeConditions;
     }
 
     public Item Item
     {
         get => item;
     }
+
+#endregion
 
     private void Awake()
     {
@@ -71,6 +59,8 @@ public class ClickableObject : MonoBehaviour
     private void Start()
     {
         SetupItem();
+        PlayerInventory.instance.OnItemAdded += (_) => UpdateTakeConditions();
+        PlayerInventory.instance.OnItemRemoved += (_) => UpdateTakeConditions();
     }
 
     private void SetupItem()
@@ -125,26 +115,47 @@ public class ClickableObject : MonoBehaviour
             Debug.LogError("item dialog not found");
             return;
         }
-	if (UIDialogManager.Instance) {
-	    if (TakeConditions)
-		UIDialogManager.Instance.Dialog = item.InspectDialog;
-	    else
-		UIDialogManager.Instance.Dialog = conditionsFailDialog;
-	}
-	else
-	    Debug.LogError("No instance of UIDialogManager");
+        if (UIDialogManager.Instance) {
+            if (TakeConditions)
+                UIDialogManager.Instance.Dialog = item.InspectDialog;
+            else
+                UIDialogManager.Instance.Dialog = item.FailedConditionsDialog;
+        }
+        else
+            Debug.LogError("No instance of UIDialogManager");
     }
 
     #endregion
 
+    public void UpdateTakeConditions()
+    {
+        bool itemCondition = true;
+        bool characterCondition = true;
+
+        foreach (Item itemNeeded in item.ItemsNeeded) {
+            if (!PlayerInventory.instance.ItemList.ContainsValue(itemNeeded)) {
+                itemCondition = false;
+                break;
+            }
+        }
+        foreach (string character in item.PnjDeathNeeded) {
+            if (GameManager.instance.GetCharacterStatus(character) != CharacterStatus.DEAD) {
+                characterCondition = false;
+                break;
+            }
+        }
+        m_takeConditions = (itemCondition && characterCondition);
+    }
+
     private void ClickOn()
     {
+        UpdateTakeConditions();
         if (UIDialogManager.Instance.InDialog)
             return;
-	if (IsInspectable && !(isTakeble && TakeConditions)) {
-	    Inspect();
-	    return;
-	}
+        if (IsInspectable && !(isTakeble && TakeConditions)) {
+            Inspect();
+            return;
+        }
         if (ClickableObjectManager.HaveInstance)
             ClickableObjectManager.instance.OpenChoicePanel(this);
     }
