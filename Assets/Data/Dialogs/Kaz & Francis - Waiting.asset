@@ -13,16 +13,26 @@ MonoBehaviour:
   m_Name: Kaz & Francis - Waiting
   m_EditorClassIdentifier: 
   List:
-  - Character: {fileID: 11400000, guid: 0c9901e5d3c38e14780a1e6a8b192546, type: 2}
-    Sentences:
-    - 'Welcome to our store! '
-    - 'We can fix everything, we even do home fixing. '
-    - You need anything?
   - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
     - (The store's clerk.)
-    - (He looks like a capable guy.)
+    - ' (He looks like a capable guy.)'
+  - Character: {fileID: 11400000, guid: 0c9901e5d3c38e14780a1e6a8b192546, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
+    Sentences:
+    - Welcome to our store!
+    - We can fix <b>everything</b>, we even do home fixing.
+    - You need anything?
+  - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
+    Sentences:
     - Actually, no.
   - Character: {fileID: 11400000, guid: 0c9901e5d3c38e14780a1e6a8b192546, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
     - Good for you, kiddo! Come back if you ever need fixing.

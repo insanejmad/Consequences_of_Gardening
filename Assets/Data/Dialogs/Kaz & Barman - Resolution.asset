@@ -13,18 +13,30 @@ MonoBehaviour:
   m_Name: Kaz & Barman - Resolution
   m_EditorClassIdentifier: 
   List:
-  - Character: {fileID: 11400000, guid: 69f36553fe4cb764890b260d55227d31, type: 2}
-    Sentences:
-    - Hi, can I get you something ?
   - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
     - (The barman.)
     - (He's got a pretty face.)
     - (The kind of face that sells a lot of cocktails and makes money.)
+  - Character: {fileID: 11400000, guid: 69f36553fe4cb764890b260d55227d31, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
+    Sentences:
+    - Hi, can I get you something ?
+  - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
+    Sentences:
     - Sure. Gin and tonic, please.
   - Character: {fileID: 11400000, guid: 69f36553fe4cb764890b260d55227d31, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
     - Your drink, sir.
   - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
     - Cheers.

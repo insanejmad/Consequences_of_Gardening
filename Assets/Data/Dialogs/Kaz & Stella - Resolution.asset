@@ -14,27 +14,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   List:
   - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
     - (A tipsy woman.)
     - (She's looking at me.)
-    - (Do I look that out of place ?)
+    - (Do I look <b>that</b> out of place ?)
     - Yes?
   - Character: {fileID: 11400000, guid: 8a717a6903e723146b10c3484c778496, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
     - Hiii, handsooome gentlemaan! Is this seat taken?
   - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
-    - ... (Is it common to call people that in casual social interactions)
+    - ... (Is it common to call people that in casual social interactions?)
+    - (Or am I handsome <b>and</b>  a gentleman?)
   - Character: {fileID: 11400000, guid: 8a717a6903e723146b10c3484c778496, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
     - 'Do you like the atmosphere?  '
     - This jazzy song is super cool, right?!
-    - ' In this kind of atmosphere, everyone feels so close... I loooove lounge bars.'
+    - ' In this kind of atmosphere, everyone feels <i>so close</i>... I loooove lounge
+      bars.'
     - You come here often?
   - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
     - Just sometimes.
   - Character: {fileID: 11400000, guid: 8a717a6903e723146b10c3484c778496, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
     - 'Yeah, I know, rigth? I could come here everyday. '
     - Cocktails here taste so good.
@@ -42,59 +56,89 @@ MonoBehaviour:
     - The bartender too, he's got magical fingers...
     - Anyways, are you enjoying yourself?
   - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
     - Ah? Huh, y-yeah. Kinda.
     - ' And erm... do <b>you</b> come here often?'
   - Character: {fileID: 11400000, guid: 8a717a6903e723146b10c3484c778496, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
     - '*rolling her eyes* Well, actually... y''know. Not really!  '
-    - 'Since my gamepad broke, I can''t play with my friends anymore. '
+    - 'Since my <i>gamepad</i> broke, I can''t play with my friends anymore. '
     - We were planning on going out tonight, but they were a <b>TOTAL</b> no show!
     - And now am here on my own...
   - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
     - ... wait. Maybe I can help you with that, actually. *smiles faintly*
   - Character: {fileID: 11400000, guid: 8a717a6903e723146b10c3484c778496, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
     - '*raises an eyebrow, reajusting her seat* Really...? Tell me more... And tell
       me about you, what do you like?'
   - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
-    - '*surprisingly enthusiastic* I like plants!'
+    - '*surprisingly enthusiastic* I like <b>plants</b>!'
   - Character: {fileID: 11400000, guid: 8a717a6903e723146b10c3484c778496, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
     - Alright, we got a rare seed here... *wink*
   - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
     - I'm quite good at keeping humid environments for them to thrives.
   - Character: {fileID: 11400000, guid: 8a717a6903e723146b10c3484c778496, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
     - R-Really. *vents herself with a hand* I imagine that's not that easy, got any
-      proof, Don Juan?
+      proof, <i>Don Juan</i>?
   - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
     - 'Yeah, I guess am quite good at caring for things, and serving all their needs
       and desires. '
     - I mean, my flat is proof enough of that.
   - Character: {fileID: 11400000, guid: 8a717a6903e723146b10c3484c778496, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
     - I like that in a man...
   - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
     - 'You just have to listen, you know ? '
     - Or well, look for subtle cues.
   - Character: {fileID: 11400000, guid: 8a717a6903e723146b10c3484c778496, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
-    - 'Why don''t we continue this conversation somewhere a little bit more... quiet. '
+    - Why don't we continue this conversation somewhere a little bit more... <i>quiet</i>.
     - 'I know! Let''s go back to yours! '
-    - And you can show me your proof.
+    - And you can show me your <i>proof...</i>
   - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
     - 'Don''t you want a new controller? '
     - I have one right here.
   - Character: {fileID: 11400000, guid: 8a717a6903e723146b10c3484c778496, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
-    - You can give it to me afterwards !
+    - You can give it to me afterwards!
   - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
     - Huh? Hu... okay. (Well... that was unexpectedly easy.)

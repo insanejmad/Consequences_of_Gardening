@@ -17,5 +17,4 @@ MonoBehaviour:
     Clip: {fileID: 0}
     ClipOverrideAmbiance: 0
     Sentences:
-    - A cone.
-    - You never know if you might need one.
+    - A cone. You never know when you might need one.

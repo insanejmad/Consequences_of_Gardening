@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   List:
   - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
-    - 'I wonder if Gert'' likes alcohol. '
+    - I wonder if <color="green">Gert'</color> likes alcohol.
     - Never tried so far.

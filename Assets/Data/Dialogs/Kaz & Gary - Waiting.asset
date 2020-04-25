@@ -13,20 +13,32 @@ MonoBehaviour:
   m_Name: Kaz & Gary - Waiting
   m_EditorClassIdentifier: 
   List:
-  - Character: {fileID: 11400000, guid: ec607722bf19b524887f139ec403995d, type: 2}
-    Sentences:
-    - 'Clairvoyant isn''t here. '
-    - When is she gonna arrive? I really need to see her.
-    - Oh, why isn't she here yet?!
   - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
     - (This guy looks depressed.)
     - (Does he need help?)
+  - Character: {fileID: 11400000, guid: ec607722bf19b524887f139ec403995d, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
+    Sentences:
+    - Clairvoyant isn't here.
+    - When is she gonna arrive? I really need to see her.
+    - Oh, <b>why</b> isn't she here yet?!
+  - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
+    Sentences:
     - Are you alrigth ?
   - Character: {fileID: 11400000, guid: ec607722bf19b524887f139ec403995d, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
-    - 'Alright? Alright! Do I <b>look</b> alright to you, sir?! '
+    - 'Alright? <i>Alright</i>! Do I <b>look</b> alright to you, sir?! '
     - I am in a PANIC here. I <b>need</b> the <color="purple">clairvoyant</color>.
   - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
     - ...have a nice wait.

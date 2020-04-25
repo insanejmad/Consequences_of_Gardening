@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7c2b114ad8beba441b71a2fe992af3ed, type: 3}
-  m_Name: Clairvoyant stand (no items)
+  m_Name: Limb
   m_EditorClassIdentifier: 
   List:
   - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
     Clip: {fileID: 0}
     ClipOverrideAmbiance: 0
     Sentences:
-    - 'An empty stall. '
-    - Could be useful to set up a <i>trap</i>...?
+    - It was an accident.
+    - Am sure Gert' didn't mean to.

@@ -14,5 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   List:
   - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
-    - Books about botanic, nothing on Gert' inside.
+    - Books about botanic. Nothing on <color="green">Gert'</color>, though.
+    - ' Does it mean am the <i>discoverer</i>?!'
+    - Maybe I should come up with a Latin name for the species.
+    - How about <i>Gertrudus giganta</i> ?

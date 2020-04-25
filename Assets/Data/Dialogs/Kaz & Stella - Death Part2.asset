@@ -14,14 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   List:
   - Character: {fileID: 11400000, guid: 8a717a6903e723146b10c3484c778496, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
     - You're such a joker, how can you pull such a serious face?
-    - You're hilarious.
+    - You're <i>hilarious</i>.
     - I wonder what it feels like.
-    - Can I touch? *pokes Gert'*
+    - Can I <b>touch</b>? *pokes Gert'*
   - Character: {fileID: 11400000, guid: f5641c674727ef04ab5d1d08be299c91, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
-    - BGRNHL GRBBLMNNNAAAHW
+    - BGRNHL GRBBLMNNNAAAHW.
   - Character: {fileID: 11400000, guid: 8a717a6903e723146b10c3484c778496, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
     - KyyyyaaAAAAAaAAAAH!

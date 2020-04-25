@@ -14,20 +14,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   List:
   - Character: {fileID: 11400000, guid: ec607722bf19b524887f139ec403995d, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
-    - So this is where you perform your strongest magic?
+    - So this is where you perform your <b>strongest</b> magic?
     - The place is a lot brighter than I imagined.
     - I had it all wrong...
-    - Light must be an important element for your powers to thrive!
+    - <i>Light</i> must be an important element for your powers to thrive!
   - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
     - I still have to prepare.
-    - Chakra matters.
+    - <i>Chakra</i> matters.
     - Would you go near that plant?
     - Helps reduce the interferences.
   - Character: {fileID: 11400000, guid: ec607722bf19b524887f139ec403995d, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
-    - Anything to have your readings be the best they can be.
-    - How close? Is this close enough?
+    - Anything to have your readings be the <b>best</b> they can be.
+    - How close? Is <i>this</i> close enough?
     - ' I can feel the cleansing already.'
     - Such a <b>powerful</b> being...

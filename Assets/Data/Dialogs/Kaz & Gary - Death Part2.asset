@@ -24,11 +24,11 @@ MonoBehaviour:
     Sentences:
     - I can even hear it talk to me. ...wait, I see it now.
     - The encounter.
-    - The fated encounter.
+    - The <i>fated</i> encounter.
     - This is it, my destiny awaits.
-    - What a glorious perspective!
+    - What a <b>glorious</b> perspective!
     - Is it the sun I feel on my skin?
     - It is so <b>warm</b>.
-    - And that perfume... so very intoxicating...
+    - And that perfume... so very <i>intoxicating</i>...
     - I am complete... Ha! farewell, corporeal sheath.
-    - Time for elevation.
+    - Time for <i>elevation</i>.

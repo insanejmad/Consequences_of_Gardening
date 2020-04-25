@@ -14,27 +14,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   List:
   - Character: {fileID: 11400000, guid: 0c9901e5d3c38e14780a1e6a8b192546, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
     - 'Well, that was some ride! Did you walk all that way? '
-    - 'You''re an athlete, kid! '
-    - Quiet part of town, too. Lucky man.
+    - 'You''re an <b>athlete</b>, kid! '
+    - Quiet part of town, too. Lucky man!
   - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
     - I do enjoy that.
   - Character: {fileID: 11400000, guid: 0c9901e5d3c38e14780a1e6a8b192546, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
     - No wonder! So, where's that broken machine you told me 'bout?
   - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
     - There. *points toward computer*
   - Character: {fileID: 11400000, guid: 0c9901e5d3c38e14780a1e6a8b192546, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
-    - 'I''ll get to it, then! ...oh boy. That''s some beast you got there, heh? '
-    - You some kind of scientist, to make such a thing? GMOS, or whatnot. *approching
-      Gert'*
+    - 'I''ll get to it, then! ...oh boy. That''s some <b>beast</b> you got there,
+      heh? '
+    - You some kind of scientist, to make such a thing? <i>GMOS</b>, or whatnot.
+      *approching Gert'*
     - 'These are roots, alright. '
     - 'And they move! Nice grip, too. Ho hoh. '
     - 'Never seen anything quite like this before.  '
   - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
-    - Bon appetit, Gert'.
+    - <i>Bon appetit</i>, Gert'.

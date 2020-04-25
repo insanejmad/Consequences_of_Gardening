@@ -23,4 +23,4 @@ MonoBehaviour:
     Clip: {fileID: 8300000, guid: 3bc0fdd7da2d77c458ab410a6a926398, type: 3}
     ClipOverrideAmbiance: 0
     Sentences:
-    - OOGA Booga
+    - <i>OOGA Booga !</i>

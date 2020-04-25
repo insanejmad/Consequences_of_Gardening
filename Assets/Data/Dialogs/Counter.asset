@@ -14,9 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   List:
   - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
     - The counter. Pretty much where one orders and pays.
     - And sometimes has conversations.
     - Am not too good at conversationing.
-    - Maybe that's why I don't have any friends?
-    - Nah, that's probably Gert'.
+    - Maybe that's why I don't have <i>any</i> friends?
+    - Nah, that's probably <color="green">Gert'</color>.

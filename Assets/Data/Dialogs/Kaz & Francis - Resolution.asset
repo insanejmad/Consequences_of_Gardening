@@ -13,55 +13,87 @@ MonoBehaviour:
   m_Name: Kaz & Francis - Resolution
   m_EditorClassIdentifier: 
   List:
+  - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
+    Sentences:
+    - (The store's clerk.)
+    - (He looks like a capable guy.
   - Character: {fileID: 11400000, guid: 0c9901e5d3c38e14780a1e6a8b192546, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
     - 'Welcome, welcome! '
     - In need of some fixing?
   - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
-    - (The store's clerk.)
-    - (He looks like a capable guy.)
     - 'Indeed... good sir. '
-    - I have a problem with my computer.
+    - I have a <i>problem</i> with my computer.
   - Character: {fileID: 11400000, guid: 0c9901e5d3c38e14780a1e6a8b192546, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
-    - 'No worries! I can fix almost anything! '
-    - 'What seems to be a problem? '
+    - No worries! I can fix almost anything!
+    - 'What seems to be the problem? '
     - With a general idea, I could write you a quote.
   - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
     - It's broken.
   - Character: {fileID: 11400000, guid: 0c9901e5d3c38e14780a1e6a8b192546, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
     - Notice anything in particular?
   - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
     - It does not work when I push the button.
   - Character: {fileID: 11400000, guid: 0c9901e5d3c38e14780a1e6a8b192546, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
     - How about the power source?
   - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
     - Power supply is brand new, plug and sockets seem fine.
   - Character: {fileID: 11400000, guid: 0c9901e5d3c38e14780a1e6a8b192546, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
     - 'Alright, my boy. '
     - 'Let''s go see that nasty problem you got. '
     - 'I can''t really help much if I don''t take a good look at the machine. '
     - You got a car?
   - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
     - I don't.
   - Character: {fileID: 11400000, guid: 0c9901e5d3c38e14780a1e6a8b192546, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
-    - I'll give you a ride, then! You can be my co-pilot ahah.
+    - I'll give you a ride, then! You can be my <b>co-pilot</b>, ahah.
   - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
     - Cool. Thanks.
   - Character: {fileID: 11400000, guid: 0c9901e5d3c38e14780a1e6a8b192546, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
     - 'I''ll log your adress after the work is done. '
     - Remind me, heh?
   - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
-    - Haha, sure... (what a relief)
+    - Haha, <i>sure</i>... (what a relief)

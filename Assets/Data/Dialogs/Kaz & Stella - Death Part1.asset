@@ -14,30 +14,42 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   List:
   - Character: {fileID: 11400000, guid: 8a717a6903e723146b10c3484c778496, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
-    - Hooooo! Your flat is SO cool.
+    - Hooooo! Your flat is <i>SO</i> cool.
     - I mean, I could totes live here.
     - 'Wanna show a lady around? '
     - Then we can have some fun...
   - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
     - Sure. That's... erm... where I live. *points to living room*
   - Character: {fileID: 11400000, guid: 8a717a6903e723146b10c3484c778496, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
     - What is this for? And this? Wow, you got so many things.
     - Could you teach me how to use this?  I would love that.
-    - ' Oooh a kitty! Meow meow!'
+    - ' Oooh a kitty! <i>Meow meow!</i>'
     - What's the name?
   - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
-    - Ghosty.
+    - <b><color=#BDB76B>Ghosty</color></b>.
   - Character: {fileID: 11400000, guid: 8a717a6903e723146b10c3484c778496, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
     - You didn't lie, you really do have a LOT of plants.
     - And this one is so <b>BIG</b>!
     - ' It''s even bigger than me!'
     - Not like am very tall, y'know. Is it some kinda tree?
-    - It looks like it could swallow me whole, ahahahahaha.
+    - It looks like it could <i>swallow me whole</i>, ahahahahaha.
   - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
-    - That's... actually very accurate.
+    - That's... actually <i>very</i> accurate.

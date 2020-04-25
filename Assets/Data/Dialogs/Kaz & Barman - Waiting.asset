@@ -13,15 +13,26 @@ MonoBehaviour:
   m_Name: Kaz & Barman - Waiting
   m_EditorClassIdentifier: 
   List:
-  - Character: {fileID: 11400000, guid: 69f36553fe4cb764890b260d55227d31, type: 2}
-    Sentences:
-    - Hi, can I get you something ?
   - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
     - (The barman.)
     - (He's got a pretty face.)
     - (The kind of face that sells a lot of cocktails and makes money.)
     - Some other time... I forgot my wallet.
   - Character: {fileID: 11400000, guid: 69f36553fe4cb764890b260d55227d31, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
+    Sentences:
+    - Hi, can I get you something ?
+  - Character: {fileID: 11400000, guid: 61d8f960bb46f82408d0f987bb4c2e5f, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
+    Sentences:
+    - Some other time... I forgot my wallet.
+  - Character: {fileID: 11400000, guid: 69f36553fe4cb764890b260d55227d31, type: 2}
+    Clip: {fileID: 0}
+    ClipOverrideAmbiance: 0
     Sentences:
     - Let me know if you need me.
