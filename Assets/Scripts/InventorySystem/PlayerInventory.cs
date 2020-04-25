@@ -17,7 +17,7 @@ public class PlayerInventory : MonoBehaviour
     public InventoryUIManager UImanager;
 
 
-    public void Start()
+    public void Awake()
     {
         if(instance == null)
         {
