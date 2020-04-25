@@ -21,6 +21,8 @@ public class ClickableObjectManager : MonoBehaviour
     {
         instance = this;
         if (itemTarget == null)
+            itemTarget = GameObject.FindGameObjectWithTag("Player")?.transform;
+        if (itemTarget == null)
             Debug.LogWarning(name + " need an itemTarget =^=", this);
         else
             _isTargetOnUI = itemTarget.GetComponentInParent<Canvas>() != null;
